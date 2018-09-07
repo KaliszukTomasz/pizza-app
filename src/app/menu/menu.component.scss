@@ -1,0 +1,83 @@
+/* DashboardComponent's private CSS styles */
+.bothPanels {
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
+}
+
+.leftPanel {
+  background: #c25fff;
+  height: 340px;
+  width: 35%;
+  display: inline-block;
+  justify-items: center;
+  border-radius: 10px;
+}
+
+.rightPanel {
+  background: #fffd96;
+  width: 65%;
+  height: auto;
+  border-radius: 10px;
+  display: inline-block;
+  justify-content: center;
+}
+
+[class*='boxes'] {
+  padding-right: 0px;
+  padding-bottom: 3px;
+  //padding-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+.containerMenu{
+  display: flex;
+  align-content: center;
+}
+//*, *:after, *:before {
+//  -webkit-box-sizing: border-box;
+//  -moz-box-sizing: border-box;
+//  box-sizing: border-box;
+//}
+
+h3 {
+  text-align: center;
+  //margin-bottom: 0;
+}
+
+h4 {
+  position: relative;
+}
+
+.grid {
+  margin: 0;
+}
+
+.boxes {
+  width: 33.4%;
+}
+
+.module {
+  padding: 5px;
+  text-align: center;
+  color: #eee;
+  max-height: 50px;
+  min-width: 100px;
+  background-color: #607d8b;
+  border-radius: 1px;
+}
+
+.module:hover {
+  background-color: #eee;
+  cursor: pointer;
+  color: #607d8b;
+}
+
+
+

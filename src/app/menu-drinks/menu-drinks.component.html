@@ -1,0 +1,34 @@
+<p>
+  menu-drinks works!
+</p>
+
+<table>
+  <tr>
+    <td id="idWidth">Id</td>
+    <td id="idName">Name</td>
+    <!--<td id="idType">Type</td>-->
+    <td id="idDescription">Description</td>
+    <td id="idPrice">Price</td>
+  </tr>
+  <tr *ngFor="let drink of drinks">
+    <td id="id">{{drink.id}}</td>
+    <td id="name">{{drink.name}}</td>
+    <!--<td id="type">{{drink. type}}</td>-->
+    <td id="description">{{drink.description}}</td>
+    <td id="price">{{drink.price}}</td>
+    <!--<button routerLink="/drinks/:id" >DETAILS</button>-->
+    <button [routerLink]="['/drinks', drink.id]">
+      details
+    </button>
+
+  </tr>
+
+  <!--<tr *ngFor="let drink of drinks">-->
+  <!--<td>{{drink.id}}</td>-->
+  <!--<td>{{drink.name}}</td>-->
+  <!--<td>{{drink. type}}</td>-->
+  <!--<td>{{drink.description}}</td>-->
+  <!--<td>{{drink.price}}</td>-->
+  <!--</tr>-->
+
+</table>

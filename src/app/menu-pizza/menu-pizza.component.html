@@ -1,0 +1,27 @@
+<p>
+  menu-pizza works!
+</p>
+
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <!--<td>Type</td>-->
+    <td>Description</td>
+    <td>Price</td>
+  </tr>
+
+  <tr *ngFor="let pizza of pizzas">
+    <td id="id">{{pizza.id}}</td>
+    <td id="name">{{pizza.name}}</td>
+    <!--<td id="type">{{pizza. type}}</td>-->
+    <td id="description">{{pizza.description}}</td>
+    <td id="price">{{pizza.price}}</td>
+    <button [routerLink]="['/pizzas', pizza.id]">
+      details
+    </button>
+    <button (click)="addToBasket(pizza)">
+      add
+    </button>
+  </tr>
+</table>

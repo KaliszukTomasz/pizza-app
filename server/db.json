@@ -1,0 +1,288 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "name": "Pizza Margherita",
+      "isAvailable": true,
+      "description": "Sos, ser",
+      "type": "pizza",
+      "price": "22"
+    },
+    {
+      "id": 2,
+      "name": "Pizza Funghi",
+      "isAvailable": true,
+      "description": "Sos, ser, pieczarki",
+      "type": "pizza",
+      "price": "23.50"
+    },
+    {
+      "id": 3,
+      "name": "Pizza 3",
+      "isAvailable": true,
+      "description": "Sos, ser, pieczarki",
+      "type": "pizza",
+      "price": "23.50"
+    },
+    {
+      "id": 4,
+      "name": "Pizza 4",
+      "isAvailable": true,
+      "description": "Sos, ser, pieczarki",
+      "type": "pizza",
+      "price": "23.50"
+    }
+  ],
+  "spagetti": [
+    {
+      "id": 1,
+      "name": "Spagetti Carbonara",
+      "isAvailable": false,
+      "description": "Sos boloński",
+      "type": "spagetti",
+      "price": "14"
+    },
+    {
+      "id": 2,
+      "name": "Spagetti Bolognese",
+      "isAvailable": false,
+      "description": "Sos boloński",
+      "type": "spagetti",
+      "price": "14"
+    },
+    {
+      "id": 3,
+      "name": "Spagetti Siciliana",
+      "isAvailable": true,
+      "description": "Sos boloński z szynką i kukurydzą",
+      "type": "spagetti",
+      "price": "17.50"
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 16
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 17
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 18
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 19
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 20
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 21
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 22
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 23
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 24
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 25
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 26
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 27
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 28
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 29
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 30
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 31
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 32
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 33
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 34
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 35
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 36
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 37
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 38
+    }
+  ],
+  "drinks": [
+    {
+      "id": 1,
+      "name": "Cola",
+      "isAvailable": true,
+      "description": "Kubek pysznej słodkiej colki",
+      "type": "drink",
+      "price": "13.90"
+    },
+    {
+      "id": 2,
+      "name": "Sprite",
+      "isAvailable": true,
+      "description": "Kubek pysznej słodkiej sprite",
+      "type": "drink",
+      "price": "13.90"
+    },
+    {
+      "id": 3,
+      "name": "Fanta",
+      "isAvailable": true,
+      "description": "Kubek pysznej słodkiej fanty",
+      "type": "drink",
+      "price": "13.90"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "dishIds": [
+        1,
+        5
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "admin"
+    }
+  ]
+}

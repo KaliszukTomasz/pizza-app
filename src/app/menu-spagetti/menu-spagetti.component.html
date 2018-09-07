@@ -1,0 +1,22 @@
+<p>
+  menu-spagetti works!
+</p>
+
+
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Description</td>
+    <td>Price</td>
+  </tr>
+
+  <tr *ngFor="let spageti of spagetti">
+    <td>{{spageti.id}}</td>
+    <td id="name">{{spageti.name}}</td>
+    <td id="description">{{spageti.description}}</td>
+    <td id="price">{{spageti.price}}</td>
+    <button [routerLink]="['/spagetti', spageti.id]">details</button>
+  </tr>
+
+</table>

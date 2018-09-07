@@ -1,0 +1,19 @@
+<!--<div *ngIf="menuService.dishesInBasket.length">-->
+<h2>Twój koszyk:</h2>
+  <table>
+    <tr>
+      <td>Lp.</td>
+      <td>Pizza name</td>
+      <td>Price</td>
+    </tr>
+    <tr *ngFor="let dish of menuService.dishesInBasket; let i = index">
+      <td>{{i+1}}.</td>
+      <td>{{dish.name}}</td>
+      <td>{{dish.price}} zł</td>
+    </tr>
+  </table>
+
+  <span>Sum = {{menuService.getSumCountInBasket()}} zł</span>
+
+<button routerLink="/order">Złóż zamówienie</button>
+<!--</div>-->
