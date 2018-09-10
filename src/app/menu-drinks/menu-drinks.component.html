@@ -10,7 +10,7 @@
     <td id="idDescription">Description</td>
     <td id="idPrice">Price</td>
   </tr>
-  <tr *ngFor="let drink of drinks">
+  <tr *ngFor="let drink of getAvailableDrinks()">
     <td id="id">{{drink.id}}</td>
     <td id="name">{{drink.name}}</td>
     <!--<td id="type">{{drink. type}}</td>-->
@@ -19,6 +19,10 @@
     <!--<button routerLink="/drinks/:id" >DETAILS</button>-->
     <button [routerLink]="['/drinks', drink.id]">
       details
+    </button>
+
+    <button (click)="addToBasket(drink)">
+      add
     </button>
 
   </tr>

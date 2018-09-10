@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Dish} from '../shared/dish';
 import {MenuService} from '../shared/menu.service';
 
@@ -15,10 +15,20 @@ export class MenuSpagettiComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.menuService.getSpagetti().subscribe(spagetti => {
+      this.spagetti = spagetti;
+    });
+    // this.menuService.dishes$.subscribe(dishes =>
+    //   this.spagetti = dishes);
+    // this.menuService.getSpagetti();
+  }
 
-    this.menuService.dishes$.subscribe(dishes =>
-      this.spagetti = dishes);
-    this.menuService.getSpagetti();
+  getAvailableSpagetti() {
+    return this.spagetti.filter(spagetti => spagetti.isAvailable === true);
+  }
+
+  addToBasket(dish: Dish) {
+    this.menuService.addToBasket(dish);
   }
 
 }

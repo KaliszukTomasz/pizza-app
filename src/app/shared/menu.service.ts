@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Dish} from './dish';
 import {Observable, Subject} from 'rxjs';
+import {Order} from './order';
 
 @Injectable({
   providedIn: 'root'
@@ -29,8 +30,9 @@ export class MenuService {
   }
 
 
-  getSpagetti() {
-    this.httpClient.get<Dish[]>('http://localhost:3000/spagetti').subscribe(dishes => this.dishes$.next(dishes));
+  getSpagetti(): Observable<Dish[]> {
+    // this.httpClient.get<Dish[]>('http://localhost:3000/spagetti').subscribe(dishes => this.dishes$.next(dishes));
+    return this.httpClient.get<Dish[]>('http://localhost:3000/spagetti');
   }
 
   getOneSpagetti(id: number): Observable<Dish> {
@@ -47,6 +49,10 @@ export class MenuService {
     console.log(this.httpClient.post('http://localhost:3000/spagetti', newSpagetti).subscribe(res => this.getSpagetti()));
   }
 
+  addNewOrder(newOrder: Order): void {
+    console.log(this.httpClient.post('http://localhost:3000/orders', newOrder).subscribe());
+  }
+
   addToBasket(dish: Dish): void {
     this.dishesInBasket.push(dish);
     // this.dishesInBasket$.next(this.dishesInBasket);
@@ -58,7 +64,32 @@ export class MenuService {
     return sumCount;
   }
 
-  getBasketObs(): Observable<Dish[]> {
-    return this.dishesInBasket$;
+  getOrders(): Observable<Order[]> {
+    return this.httpClient.get<Order[]>('http://localhost:3000/orders');
+  }
+
+  changeStatusOrderToDone(order: Order) {
+    const id: number = order.id;
+    return this.httpClient.put(`http://localhost:3000/orders/${id}`, order).subscribe(res => console.log(res));
+  }
+
+  getOneOrder(id: number): Observable<Order> {
+    return this.httpClient.get<Order>(`http://localhost:3000/orders/${id}`);
+
+  }
+
+  sendNewAvailabilityOfPizza(dish: Dish) {
+    const id: number = dish.id;
+    return this.httpClient.put(`http://localhost:3000/pizzas/${id}`, dish).subscribe();
+  }
+
+  sendNewAvailabilityOfSpagetti(dish: Dish) {
+    const id: number = dish.id;
+    return this.httpClient.put(`http://localhost:3000/spagetti/${id}`, dish).subscribe();
+  }
+
+  sendNewAvailabilityOfDrink(dish: Dish) {
+    const id: number = dish.id;
+    return this.httpClient.put(`http://localhost:3000/drinks/${id}`, dish).subscribe();
   }
 }

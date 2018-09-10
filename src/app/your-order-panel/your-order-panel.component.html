@@ -1,4 +1,3 @@
-<!--<div *ngIf="menuService.dishesInBasket.length">-->
 <h2>Twój koszyk:</h2>
   <table>
     <tr>
@@ -14,6 +13,6 @@
   </table>
 
   <span>Sum = {{menuService.getSumCountInBasket()}} zł</span>
+<br>
+<button *ngIf="isThisOrderView === false" routerLink="/order">Zamówienie</button>
 
-<button routerLink="/order">Złóż zamówienie</button>
-<!--</div>-->

@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "Pizza 3",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
       "price": "23.50"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "name": "Pizza 4",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
       "price": "23.50"
@@ -59,7 +59,7 @@
       "price": "17.50"
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -67,7 +67,7 @@
       "id": 16
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -99,7 +99,7 @@
       "id": 20
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -131,7 +131,7 @@
       "id": 24
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -241,13 +241,125 @@
       "description": "nowy opis",
       "type": "spagetti",
       "id": 38
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 39
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 40
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 41
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 42
+    },
+    {
+      "isAvailable": false,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 43
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 44
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 45
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 46
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 47
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 48
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 49
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 50
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 51
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 52
     }
   ],
   "drinks": [
     {
       "id": 1,
       "name": "Cola",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Kubek pysznej słodkiej colki",
       "type": "drink",
       "price": "13.90"
@@ -255,7 +367,7 @@
     {
       "id": 2,
       "name": "Sprite",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Kubek pysznej słodkiej sprite",
       "type": "drink",
       "price": "13.90"
@@ -271,11 +383,70 @@
   ],
   "orders": [
     {
-      "id": 1,
-      "dishIds": [
-        1,
-        5
-      ]
+      "address": "NowaUlica",
+      "firstName": "Kaliszuk",
+      "subject": "Komentarz",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "address": "ADres",
+      "firstName": "Nowy",
+      "lastName": "Nazwikso",
+      "subject": "Koment",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "status": false,
+      "dishes": [],
+      "id": 3
+    },
+    {
+      "status": false,
+      "dishes": [],
+      "id": 4
+    },
+    {
+      "status": false,
+      "dishes": [],
+      "id": 5
     }
   ],
   "users": [

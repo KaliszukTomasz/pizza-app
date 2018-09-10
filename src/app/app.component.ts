@@ -7,6 +7,6 @@ import {MenuService} from './shared/menu.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pizza-app';
+  title = 'Witamy w naszej pizzerii! :)';
 
 }

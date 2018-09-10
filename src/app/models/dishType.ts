@@ -1,6 +1,6 @@
 
-enum DishType {
-  Pizza = 'PIZZA',
-  Spagetti = 'SPAGETTI',
+export enum DishType {
+  PIZZA = 'PIZZA',
+  SPAGETTI = 'SPAGETTI',
   DRINK = 'DRINK',
 }

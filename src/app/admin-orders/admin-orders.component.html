@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <td >Id</td>
+    <td >Adres</td>
+    <td >Status</td>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td >{{order?.id}}</td>
+    <td >{{order?.address}}</td>
+    <td >{{order?.status}}</td>
+    <button (click)="changeToDoneStatus(order)">zrobione</button>
+    <button [routerLink]="['/admin/orders', order.id]">details</button>
+
+  </tr>
+</table>

@@ -20,4 +20,11 @@ export class MenuDrinksComponent implements OnInit {
     });
   }
 
+  getAvailableDrinks() {
+    return this.drinks.filter(drink => drink.isAvailable === true);
+  }
+  addToBasket(dish: Dish) {
+    this.menuService.addToBasket(dish);
+  }
+
 }

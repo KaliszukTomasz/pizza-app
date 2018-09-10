@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Dish} from '../shared/dish';
 import {MenuService} from '../shared/menu.service';
 import {Router} from '@angular/router';
-import {Subject} from 'rxjs';
+import {DishType} from '../models/dishType';
 
 @Component({
   selector: 'app-menu',
@@ -16,11 +16,15 @@ export class MenuComponent implements OnInit {
   //   this.destroy$.next();
   //   this.destroy$.complete();
   // }
+
   // @ts-ignore
   dishType: DishType = 'PIZZA';
   dishes: Dish[];
   spagetti: Dish[];
   drinks: Dish[];
+  // varSpagetti: DishType = DishType.Spagetti;
+  // varDrink: DishType = DishType.DRINK;
+  // varPizza: DishType = DishType.Pizza;
 
   newSpagetti: Dish = {
     isAvailable: true,

@@ -11,10 +11,9 @@
     <td>Price</td>
   </tr>
 
-  <tr *ngFor="let pizza of pizzas">
+  <tr *ngFor="let pizza of getAvailablePizzas()">
     <td id="id">{{pizza.id}}</td>
     <td id="name">{{pizza.name}}</td>
-    <!--<td id="type">{{pizza. type}}</td>-->
     <td id="description">{{pizza.description}}</td>
     <td id="price">{{pizza.price}}</td>
     <button [routerLink]="['/pizzas', pizza.id]">

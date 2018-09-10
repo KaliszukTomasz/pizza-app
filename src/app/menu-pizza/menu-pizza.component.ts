@@ -29,6 +29,9 @@ export class MenuPizzaComponent implements OnInit {
     this.menuService.addToBasket(dish);
   }
 
+  getAvailablePizzas(){
+    return this.pizzas.filter(pizza => pizza.isAvailable === true);
+  }
   // getAvailablePizzas() {
   //   this.pizzas.forEach(pizza => {
   //     if (pizza.isAvailable) {
