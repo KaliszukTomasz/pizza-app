@@ -7,19 +7,14 @@
 
 .leftPanel {
   background: #c25fff;
-  height: 340px;
+  min-height: 340px;
+  height: auto;
   width: 35%;
   display: inline-block;
   justify-items: center;
   border-radius: 10px;
   align-content: center;
 }
-.yourOrderPanel{
-  display: grid;}
-.yourOrderPanel th {
-    background-color: #4CAF50;
-    color: white;
-  }
 
 .rightPanel {
   background: #fffd96;

@@ -7,19 +7,19 @@
       <th>Pizza name</th>
       <th>Price</th>
     </tr>
-    <tr *ngFor="let dish of menuService.dishesInBasket; let i = index">
+    <tr *ngFor="let dish of getDishesInBasket(); let i = index">
       <td>{{i+1}}.</td>
       <td>{{dish.name}}</td>
       <td>{{dish.price}} zł</td>
     </tr>
   </table>
   <br>
-  <span>Sumaryczna cena zamówienia: {{menuService.getSumCountInBasket()}} zł</span>
+  <span>Sumaryczna cena zamówienia: {{getSumCountInBasket()}} zł</span>
   <br>
   <button *ngIf="isThisOrderView === false" routerLink="/order" id="submit">Zamówienie</button>
 </ng-container>
 
-<ng-container *ngIf="menuService.dishesInBasket.length === 0">
+<ng-container *ngIf="getDishesInBasket().length === 0">
   <h2>jest obecnie pusty!</h2>
 </ng-container>
 

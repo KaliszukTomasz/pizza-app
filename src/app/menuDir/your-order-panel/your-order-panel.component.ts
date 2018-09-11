@@ -21,4 +21,11 @@ export class YourOrderPanelComponent implements OnInit {
     }
   }
 
+  getSumCountInBasket() {
+    return this.menuService.getSumCountInBasket();
+  }
+
+  getDishesInBasket() {
+    return this.menuService.dishesInBasket;
+  }
 }
