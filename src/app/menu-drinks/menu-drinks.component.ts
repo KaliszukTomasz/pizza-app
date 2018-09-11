@@ -10,13 +10,17 @@ import {MenuService} from '../shared/menu.service';
 export class MenuDrinksComponent implements OnInit {
 
   drinks: Dish[];
+  filteredDrinks: Dish[];
 
   constructor(private readonly menuService: MenuService) {
   }
-
+  filterAvailablePizzas(): void {
+    this.filteredDrinks = this.drinks.filter(drink => drink.isAvailable === true);
+  }
   ngOnInit() {
     this.menuService.getDrinks().subscribe(drink => {
       this.drinks = drink;
+      this.filterAvailablePizzas();
     });
   }
 

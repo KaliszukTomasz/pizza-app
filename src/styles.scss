@@ -1,1 +1,145 @@
 /* You can add global styles to this file, and also import other style files */
+.bothPanels {
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
+}
+
+.leftPanel {
+  background: #c25fff;
+  height: 340px;
+  width: 35%;
+  display: inline-block;
+  justify-items: center;
+  border-radius: 10px;
+}
+
+.rightPanel {
+  background: #fffd96;
+  width: 65%;
+  height: auto;
+  border-radius: 10px;
+  display: inline-block;
+  justify-content: center;
+}
+
+.menuDishes {
+  #id {
+    width: 5px;
+  }
+  #name {
+    width: 150px;
+  }
+  #description {
+    width: 300px;
+  }
+  #price {
+    width: 50px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 4px;
+  }
+}
+
+.navigation {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  img {
+    width: 36px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+    border-right: 1px solid #bbb;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #4CAF50;
+  }
+}
+
+.formContainer {
+  border-radius: 5px;
+  padding: 30px;
+  h3 {
+    text-align: center;
+    margin: auto
+  }
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+ #submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+
+  #submit:hover {
+    background-color: #45a049;
+  }
+
+  #back {
+    background-color: #af4900;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #back:hover {
+    background-color: #a03209;
+  }
+
+}
+

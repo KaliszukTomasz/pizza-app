@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Dish} from '../shared/dish';
 import {MenuService} from '../shared/menu.service';
-import {takeUntil} from 'rxjs/operators';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
@@ -31,21 +30,4 @@ export class DrinksDetailsComponent implements OnInit {
     this.location.back();
   }
 
-  /*
-  project: Project;
-
-  constructor(
-    private readonly route: ActivatedRoute,
-    private readonly service: ProjectsService,
-  ) {}
-
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-
-    this.service.getProject(+id)
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(res => this.project = res);
-  }
-}
-   */
 }

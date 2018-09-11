@@ -1,39 +1,24 @@
-
-
 <div class="bothPanels">
   <div class="leftPanel">
-
-
-
 
     <button (click)="dishType = 'PIZZA'" ng-init="count=PIZZA">PIZZA</button>
     <button (click)="dishType = 'SPAGETTI'" ng-init="count=PIZZA">SPAGETTI</button>
     <button (click)="dishType = 'DRINK'" ng-init="count=PIZZA">DRINK</button>
 
-    <button (click)="addNewSpagetti()" >addDish!!!!!</button>
+    <button (click)="addNewSpagetti()">addDish!!!!!</button>
     <app-your-order-panel></app-your-order-panel>
   </div>
 
   <div class="rightPanel">
     <div class="containerMenu">
       <a class="boxes" (click)="dishType = 'PIZZA'">
-        <div class="module hero">
-          <h4>Pizzas</h4>
-        </div>
+        <div class="module"> Pizza</div>
       </a>
-
-
       <a class="boxes" (click)="dishType = 'SPAGETTI'">
-        <div class="module hero">
-          <h4>Spagetti</h4>
-        </div>
+        <div class="module">Spagetti</div>
       </a>
-
-      <!--routerLink="/drinks"-->
       <a class="boxes" (click)="dishType = 'DRINK'">
-        <div class="module hero">
-          <h4>Drinks</h4>
-        </div>
+        <div class="module">Napoje</div>
       </a>
     </div>
     <div class="container">
@@ -41,12 +26,6 @@
       <app-menu-pizza *ngIf="dishType === 'PIZZA'"></app-menu-pizza>
       <app-menu-spagetti *ngIf="dishType === 'SPAGETTI'"></app-menu-spagetti>
     </div>
-
-
   </div>
-
 </div>
-<!--<app-menu-drinks *ngIf="dishType === 'DRINK'"></app-menu-drinks>-->
-<!--<app-menu-pizza *ngIf="dishType === 'PIZZA'"></app-menu-pizza>-->
-<!--<app-menu-spagetti *ngIf="dishType === 'SPAGETTI'"></app-menu-spagetti>-->
 

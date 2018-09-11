@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "Pizza 3",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
       "price": "23.50"
@@ -353,6 +353,14 @@
       "description": "nowy opis",
       "type": "spagetti",
       "id": 52
+    },
+    {
+      "isAvailable": true,
+      "price": 20,
+      "name": "noweDanie",
+      "description": "nowy opis",
+      "type": "spagetti",
+      "id": 53
     }
   ],
   "drinks": [
@@ -386,7 +394,7 @@
       "address": "NowaUlica",
       "firstName": "Kaliszuk",
       "subject": "Komentarz",
-      "status": false,
+      "status": true,
       "dishes": [
         {
           "id": 1,
@@ -412,7 +420,7 @@
       "firstName": "Nowy",
       "lastName": "Nazwikso",
       "subject": "Koment",
-      "status": false,
+      "status": true,
       "dishes": [
         {
           "id": 1,
@@ -439,7 +447,7 @@
       "id": 3
     },
     {
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 4
     },
@@ -447,12 +455,175 @@
       "status": false,
       "dishes": [],
       "id": 5
+    },
+    {
+      "address": "asd",
+      "firstName": "asd",
+      "lastName": "asd",
+      "subject": "asd",
+      "status": true,
+      "dishes": [],
+      "id": 6
+    },
+    {
+      "address": "asd",
+      "firstName": "Nowygracz",
+      "lastName": "asd",
+      "subject": "sad",
+      "status": false,
+      "dishes": [
+        {
+          "id": 3,
+          "name": "Spagetti Siciliana",
+          "isAvailable": true,
+          "description": "Sos boloński z szynką i kukurydzą",
+          "type": "spagetti",
+          "price": "17.50"
+        },
+        {
+          "id": 3,
+          "name": "Spagetti Siciliana",
+          "isAvailable": true,
+          "description": "Sos boloński z szynką i kukurydzą",
+          "type": "spagetti",
+          "price": "17.50"
+        },
+        {
+          "id": 3,
+          "name": "Spagetti Siciliana",
+          "isAvailable": true,
+          "description": "Sos boloński z szynką i kukurydzą",
+          "type": "spagetti",
+          "price": "17.50"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "address": "asd",
+      "firstName": "asd",
+      "lastName": "asd",
+      "subject": "skf",
+      "status": false,
+      "dishes": [],
+      "id": 8
+    },
+    {
+      "address": "",
+      "firstName": "",
+      "lastName": "",
+      "subject": "",
+      "status": false,
+      "dishes": [],
+      "id": 9
+    },
+    {
+      "firstName": "sd",
+      "lastName": "asd",
+      "address": "asd",
+      "subject": "asd",
+      "status": false,
+      "dishes": [],
+      "id": 10
+    },
+    {
+      "status": false,
+      "dishes": [],
+      "id": 11
+    },
+    {
+      "lastName": "asd",
+      "firstName": "asd",
+      "address": "asd",
+      "status": false,
+      "dishes": [
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 20
+        },
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 23
+        },
+        {
+          "id": 3,
+          "name": "Pizza 3",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        }
+      ],
+      "id": 12
+    },
+    {
+      "status": false,
+      "dishes": [
+        {
+          "id": 3,
+          "name": "Spagetti Siciliana",
+          "isAvailable": true,
+          "description": "Sos boloński z szynką i kukurydzą",
+          "type": "spagetti",
+          "price": "17.50"
+        },
+        {
+          "id": 3,
+          "name": "Spagetti Siciliana",
+          "isAvailable": true,
+          "description": "Sos boloński z szynką i kukurydzą",
+          "type": "spagetti",
+          "price": "17.50"
+        },
+        {
+          "id": 3,
+          "name": "Spagetti Siciliana",
+          "isAvailable": true,
+          "description": "Sos boloński z szynką i kukurydzą",
+          "type": "spagetti",
+          "price": "17.50"
+        }
+      ],
+      "id": 13
+    },
+    {
+      "firstName": "Tomsa",
+      "lastName": "ASd",
+      "address": "asd",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        }
+      ],
+      "id": 14
     }
   ],
   "users": [
     {
       "id": 1,
-      "name": "admin",
+      "login": "admin",
       "password": "admin"
     }
   ]

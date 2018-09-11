@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Dish} from '../shared/dish';
 import {MenuService} from '../shared/menu.service';
 
+
 @Component({
   selector: 'app-menu-pizza',
   templateUrl: './menu-pizza.component.html',
@@ -10,28 +11,38 @@ import {MenuService} from '../shared/menu.service';
 export class MenuPizzaComponent implements OnInit {
 
   pizzas: Dish[];
+  filteredPizzas: Dish[];
+
 
   // availablePizzas: Dish[];
 
   constructor(private readonly menuService: MenuService) {
   }
 
-  ngOnInit() {
-    this.menuService.getPizzas().subscribe(pizza => {
-      this.pizzas = pizza;
-      // this.getAvailablePizzas();
-    });
-
-
-  }
 
   addToBasket(dish: Dish) {
     this.menuService.addToBasket(dish);
   }
 
-  getAvailablePizzas(){
-    return this.pizzas.filter(pizza => pizza.isAvailable === true);
+
+
+  filterAvailablePizzas(): void {
+    this.filteredPizzas = this.pizzas.filter(pizza => pizza.isAvailable === true);
   }
+
+//TODO sprawdzenie czy jest nullem, jeśli tak, to zaciągnięcie
+
+  ngOnInit(): void {
+    this.menuService.getPizzas().subscribe(pizza => {
+      this.pizzas = pizza;
+      this.filterAvailablePizzas();
+    });
+
+  }
+
+
+
+
   // getAvailablePizzas() {
   //   this.pizzas.forEach(pizza => {
   //     if (pizza.isAvailable) {

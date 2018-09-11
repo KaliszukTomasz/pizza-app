@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Dish} from './dish';
 import {Observable, Subject} from 'rxjs';
 import {Order} from './order';
+import {Account} from '../models/account';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,8 @@ export class MenuService {
   dishes$ = new Subject<Dish[]>();
   private dishesInBasket$ = new Subject<Dish[]>();
   dishesInBasket: Dish[] = [];
+  authenticated: boolean = false;
+  // authenticated2: Observable<boolean>;
 
   constructor(readonly httpClient: HttpClient) {
   }
@@ -92,4 +95,22 @@ export class MenuService {
     const id: number = dish.id;
     return this.httpClient.put(`http://localhost:3000/drinks/${id}`, dish).subscribe();
   }
+
+  getAccountFromDataBase(): Observable<Account> {
+    return this.httpClient.get<Account>('http://localhost:3000/users/1');
+
+  }
+
+  setAuthenticatedUser() {
+    this.authenticated = true;
+  }
+
+  setUnauthenticatedUser() {
+    this.authenticated = false;
+  }
+
+  getAuthenticatedStatus(): boolean {
+    return this.authenticated;
+  }
 }
+

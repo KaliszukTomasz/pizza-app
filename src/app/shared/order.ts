@@ -1,12 +1,19 @@
 import {Dish} from './dish';
 
-export interface Order {
+export class Order {
 
-  id?: number,
-  firstName: string,
-  lastName: string,
-  address: string,
-  subject?: string,
-  status: boolean,
-  dishes: Dish[],
+  id?: number;
+
+  firstName: string;
+
+  lastName: string;
+
+  address: string;
+
+  subject?: string;
+
+  status: boolean;
+
+  dishes: Dish[];
+
 }

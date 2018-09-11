@@ -10,13 +10,18 @@ import {MenuService} from '../shared/menu.service';
 export class MenuSpagettiComponent implements OnInit {
 
   spagetti: Dish[];
+  filteredSpagetti: Dish[];
 
   constructor(private readonly menuService: MenuService) {
   }
 
+  filterAvailableSpagetti(): void {
+    this.filteredSpagetti = this.spagetti.filter(spagetti => spagetti.isAvailable === true);
+  }
   ngOnInit() {
     this.menuService.getSpagetti().subscribe(spagetti => {
       this.spagetti = spagetti;
+      this.filterAvailableSpagetti();
     });
     // this.menuService.dishes$.subscribe(dishes =>
     //   this.spagetti = dishes);

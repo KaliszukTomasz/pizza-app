@@ -1,22 +1,18 @@
-<p>
-  menu-pizza works!
-</p>
 
-<table>
+<table class="menuDishes">
   <tr>
     <td>Id</td>
     <td>Name</td>
-    <!--<td>Type</td>-->
     <td>Description</td>
     <td>Price</td>
   </tr>
 
-  <tr *ngFor="let pizza of getAvailablePizzas()">
-    <td id="id">{{pizza.id}}</td>
-    <td id="name">{{pizza.name}}</td>
-    <td id="description">{{pizza.description}}</td>
-    <td id="price">{{pizza.price}}</td>
-    <button [routerLink]="['/pizzas', pizza.id]">
+  <tr *ngFor="let pizza of filteredPizzas">
+    <td id="id">{{pizza?.id}}</td>
+    <td id="name">{{pizza?.name}}</td>
+    <td id="description">{{pizza?.description}}</td>
+    <td id="price">{{pizza?.price}}</td>
+    <button [routerLink]="['/pizzas', pizza?.id]">
       details
     </button>
     <button (click)="addToBasket(pizza)">

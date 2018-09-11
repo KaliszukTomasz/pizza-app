@@ -4,44 +4,27 @@
   </div>
 
   <div class="rightPanel">
-    <!--<label>Twoje imię i nazwisko: </label>-->
-    <!--<input (keyup.enter)="onKey1($event)" (blur)="onKey1($event)">-->
-    <!--<p>{{name}}</p>-->
-    <!--<br>-->
-    <!--<label>Adres dostawy: </label>-->
-    <!--<input (keyup.enter)="onKey2($event)" (blur)="onKey2($event)">-->
-    <!--<p>{{address}}</p>-->
-    <!--<br>-->
-    <!--<button (click)="sendOrderToBase()">Wyślij zamówienie</button>-->
-    <!--<button (click)="goBack()">go back</button>-->
-    <!--<h2 *ngIf="confirmed === true">Twoje zamówienie zostało wysłane! Zapraszamy ponownie </h2>-->
+    <div class="formContainer">
+      <h3>Formularz kontaktowy</h3>
 
+      <label for="fname">Imię zamawiającego:</label>
+      <input [(ngModel)]="order.firstName" type="text" id="fname" name="firstname" placeholder="Twoje imię...">
 
+      <label for="lname">Nazwisko zamawiającego:</label>
+      <input [(ngModel)]="order.lastName" type="text" id="lname" name="lastname" placeholder="Twoje nazwisko...">
 
-    <h3>Contact Form</h3>
+      <label for="address">Adres dostawy:</label>
+      <input [(ngModel)]="order.address" type="text" id="address" name="address" placeholder="Twój adres...">
 
-    <div class="container">
+      <label for="subject">Komentarz:</label>
+      <textarea [(ngModel)]="order.subject" id="subject" name="subject" placeholder="Komentarz do zamówienia..."
+                style="height:200px"></textarea>
 
-        <label for="fname">Imię zamawiającego:</label>
-        <input (blur)="onKeyFirstName($event)" type="text" id="fname" name="firstname" placeholder="Your name.." >
-
-        <label for="lname">Nazwisko zamawiającego:</label>
-        <input (blur)="onKeyLastName($event)"  type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-        <label for="address">Adres dostawy:</label>
-        <input (blur)="onKeyAddress($event)" type="text" id="address" name="address" placeholder="Your address..">
-
-        <label for="subject">Komentarz:</label>
-        <textarea (blur)="onKeySubject($event)" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-        <input (click)="sendOrderToBase()" type="submit" value="Zamów">
-        <button (click)="goBack()">go back</button>
-        <h2 *ngIf="confirmed === true">Twoje zamówienie zostało wysłane! Zapraszamy ponownie </h2>
+      <button (click)="sendOrderToBase()" id="submit"> Zamów</button>
+      <button (click)="goBack()" id="back"> Wróć</button>
+      <h2 *ngIf="confirmed === true">Twoje zamówienie zostało wysłane! Zapraszamy ponownie </h2>
 
     </div>
   </div>
-
-
-
 
 </div>

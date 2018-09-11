@@ -1,9 +1,4 @@
-<p>
-  menu-spagetti works!
-</p>
-
-
-<table>
+<table class="menuDishes">
   <tr>
     <td>Id</td>
     <td>Name</td>
@@ -11,15 +6,13 @@
     <td>Price</td>
   </tr>
 
-  <tr *ngFor="let spageti of getAvailableSpagetti()">
-    <td>{{spageti.id}}</td>
-    <td id="name">{{spageti.name}}</td>
-    <td id="description">{{spageti.description}}</td>
-    <td id="price">{{spageti.price}}</td>
-    <button [routerLink]="['/spagetti', spageti.id]">details</button>
-    <button (click)="addToBasket(spageti)">
-      add
-    </button>
+  <tr *ngFor="let spageti of filteredSpagetti">
+    <td>{{spageti?.id}}</td>
+    <td id="name">{{spageti?.name}}</td>
+    <td id="description">{{spageti?.description}}</td>
+    <td id="price">{{spageti?.price}}</td>
+    <button [routerLink]="['/spagetti', spageti?.id]">details</button>
+    <button (click)="addToBasket(spageti)"> add</button>
   </tr>
 
 </table>

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {MenuPizzaComponent} from './menu-pizza/menu-pizza.component';
 import {MenuSpagettiComponent} from './menu-spagetti/menu-spagetti.component';
 import {MenuDrinksComponent} from './menu-drinks/menu-drinks.component';
@@ -11,6 +11,7 @@ import {OrderComponent} from './order/order.component';
 import {AdminOrdersComponent} from './admin-orders/admin-orders.component';
 import {AdminOrderDetailsComponent} from './admin-order-details/admin-order-details.component';
 import {AdminDishesComponent} from './admin-dishes/admin-dishes.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {path: 'pizzas', component: MenuPizzaComponent},
@@ -24,10 +25,13 @@ const routes: Routes = [
   {path: 'admin/orders', component: AdminOrdersComponent},
   {path: 'admin/orders/:id', component: AdminOrderDetailsComponent},
   {path: 'admin/dishes', component: AdminDishesComponent},
+  {path: 'login', component: LoginComponent},
+  {path: '**', redirectTo: 'menu'},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

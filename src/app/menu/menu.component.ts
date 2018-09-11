@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   // }
 
   // @ts-ignore
-  dishType: DishType = 'PIZZA';
+  dishType: DishType = DishType.PIZZA;
   dishes: Dish[];
   spagetti: Dish[];
   drinks: Dish[];

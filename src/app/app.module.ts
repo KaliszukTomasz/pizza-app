@@ -19,6 +19,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
 import { AdminOrderDetailsComponent } from './admin-order-details/admin-order-details.component';
 import { AdminDishesComponent } from './admin-dishes/admin-dishes.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,15 @@ import { AdminDishesComponent } from './admin-dishes/admin-dishes.component';
     NavBarComponent,
     AdminOrdersComponent,
     AdminOrderDetailsComponent,
-    AdminDishesComponent
+    AdminDishesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

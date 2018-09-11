@@ -1,58 +1,18 @@
-/* DashboardComponent's private CSS styles */
-.bothPanels {
-  display: flex;
-  justify-content: space-around;
-  overflow: auto;
-}
-
-.leftPanel {
-  background: #c25fff;
-  height: 340px;
-  width: 35%;
-  display: inline-block;
-  justify-items: center;
-  border-radius: 10px;
-}
-
-.rightPanel {
-  background: #fffd96;
-  width: 65%;
-  height: auto;
-  border-radius: 10px;
-  display: inline-block;
-  justify-content: center;
-}
-
-[class*='boxes'] {
-  padding-right: 0px;
-  padding-bottom: 3px;
-  //padding-bottom: 20px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  display: flex;
-}
-.containerMenu{
-  display: flex;
-  align-content: center;
-}
-//*, *:after, *:before {
-//  -webkit-box-sizing: border-box;
-//  -moz-box-sizing: border-box;
-//  box-sizing: border-box;
+//.container {
+//  display: flex;
 //}
+.containerMenu {
+  display: flex;
 
-h3 {
-  text-align: center;
-  //margin-bottom: 0;
-}
 
-h4 {
-  position: relative;
+  [class*='boxes'] {
+    padding-right: 0px;
+    padding-bottom: 3px;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .grid {
@@ -64,9 +24,12 @@ h4 {
 }
 
 .module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
-  text-align: center;
   color: #eee;
+  min-height: 40px;
   max-height: 50px;
   min-width: 100px;
   background-color: #607d8b;

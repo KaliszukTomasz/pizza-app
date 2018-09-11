@@ -3,14 +3,12 @@
   <tr>
     <td >Id</td>
     <td >Name</td>
-    <td >Description</td>
     <td >Price</td>
     <td >Availability</td>
   </tr>
   <tr *ngFor="let pizza of pizzas">
     <td >{{pizza.id}}</td>
     <td >{{pizza.name}}</td>
-    <td >{{pizza.description}}</td>
     <td >{{pizza.price}}</td>
     <td >{{pizza.isAvailable}}</td>
     <button (click)="changeAvailability(pizza)">Zmień dostępność</button>
@@ -23,7 +21,6 @@
   <tr>
     <td>Id</td>
     <td>Name</td>
-    <td>Description</td>
     <td>Price</td>
     <td >Availability</td>
   </tr>
@@ -31,7 +28,6 @@
   <tr *ngFor="let spageti of spagetti">
     <td>{{spageti.id}}</td>
     <td >{{spageti.name}}</td>
-    <td >{{spageti.description}}</td>
     <td>{{spageti.price}}</td>
     <td >{{spageti.isAvailable}}</td>
     <button (click)="changeAvailability(spageti)">Zmień dostępność</button>
@@ -44,14 +40,12 @@
     <tr>
       <td >Id</td>
       <td >Name</td>
-      <td >Description</td>
       <td >Price</td>
       <td >Availability</td>
     </tr>
     <tr *ngFor="let drink of drinks">
       <td >{{drink.id}}</td>
       <td >{{drink.name}}</td>
-      <td >{{drink.description}}</td>
       <td >{{drink.price}}</td>
       <td >{{drink.isAvailable}}</td>
       <button (click)="changeAvailability(drink)">Zmień dostępność</button>
