@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {MenuService} from '../shared/menu.service';
-import {Dish} from '../shared/dish';
-import {DishType} from '../models/dishType';
+import {MenuService} from '../../service/menu.service';
+import {Dish} from '../../shared/dish';
+import {DishType} from '../../shared/dishType';
 
 @Component({
   selector: 'app-admin-dishes',

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {MenuService} from '../shared/menu.service';
+import {MenuService} from '../../service/menu.service';
 import {Location} from '@angular/common';
-import {Order} from '../shared/order';
+import {Order} from '../../shared/order';
 
 @Component({
   selector: 'app-admin-order-details',

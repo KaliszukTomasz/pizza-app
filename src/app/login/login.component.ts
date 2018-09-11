@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {MenuService} from '../shared/menu.service';
+import {MenuService} from '../service/menu.service';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
-import {Account} from '../models/account';
+import {Account} from '../shared/account';
 
 @Component({
   selector: 'app-login',

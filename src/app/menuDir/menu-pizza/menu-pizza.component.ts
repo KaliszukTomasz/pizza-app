@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Dish} from '../shared/dish';
-import {MenuService} from '../shared/menu.service';
+import {Dish} from '../../shared/dish';
+import {MenuService} from '../../service/menu.service';
 
 
 @Component({

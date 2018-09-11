@@ -37,7 +37,7 @@
     {
       "id": 1,
       "name": "Spagetti Carbonara",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński",
       "type": "spagetti",
       "price": "14"
@@ -618,6 +618,152 @@
         }
       ],
       "id": 14
+    },
+    {
+      "firstName": "asd",
+      "lastName": "sad",
+      "address": "sadssss",
+      "status": true,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 2,
+          "name": "Pizza Funghi",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        }
+      ],
+      "id": 15
+    },
+    {
+      "firstName": "Tomas",
+      "address": "kndspifabek ;",
+      "status": true,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 18
+        },
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 18
+        },
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 18
+        }
+      ],
+      "id": 16
+    },
+    {
+      "firstName": "Tomasz",
+      "status": false,
+      "dishes": [],
+      "id": 17
+    },
+    {
+      "firstName": "Tomasz",
+      "lastName": "Kaliszuk",
+      "address": "Jed",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Spagetti Carbonara",
+          "isAvailable": true,
+          "description": "Sos boloński",
+          "type": "spagetti",
+          "price": "14"
+        },
+        {
+          "id": 1,
+          "name": "Spagetti Carbonara",
+          "isAvailable": true,
+          "description": "Sos boloński",
+          "type": "spagetti",
+          "price": "14"
+        },
+        {
+          "id": 1,
+          "name": "Spagetti Carbonara",
+          "isAvailable": true,
+          "description": "Sos boloński",
+          "type": "spagetti",
+          "price": "14"
+        },
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 18
+        }
+      ],
+      "id": 18
+    },
+    {
+      "firstName": "asd",
+      "lastName": "asd",
+      "address": "sad",
+      "subject": "ads",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        }
+      ],
+      "id": 19
     }
   ],
   "users": [

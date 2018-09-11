@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Dish} from '../shared/dish';
-import {MenuService} from '../shared/menu.service';
+import {Dish} from '../../shared/dish';
+import {MenuService} from '../../service/menu.service';
 import {Router} from '@angular/router';
-import {DishType} from '../models/dishType';
+import {DishType} from '../../shared/dishType';
 
 @Component({
   selector: 'app-menu',
@@ -17,14 +17,12 @@ export class MenuComponent implements OnInit {
   //   this.destroy$.complete();
   // }
 
-  // @ts-ignore
+
   dishType: DishType = DishType.PIZZA;
   dishes: Dish[];
   spagetti: Dish[];
   drinks: Dish[];
-  // varSpagetti: DishType = DishType.Spagetti;
-  // varDrink: DishType = DishType.DRINK;
-  // varPizza: DishType = DishType.Pizza;
+
 
   newSpagetti: Dish = {
     isAvailable: true,
@@ -38,19 +36,6 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.menuService.getPizzas().subscribe(dishes => {
-    //   this.dishes = dishes;
-    // });
-    //
-    // this.menuService.getDrinks().subscribe(drinks => {
-    //   this.drinks = drinks;
-    // });
-
-    // this.menuService.dishes$.subscribe(dishes =>
-    //   this.spagetti = dishes);
-    // this.menuService.getSpagetti();
-
-
   }
 
   addNewSpagetti() {

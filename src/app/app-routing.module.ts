@@ -1,16 +1,16 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {MenuPizzaComponent} from './menu-pizza/menu-pizza.component';
-import {MenuSpagettiComponent} from './menu-spagetti/menu-spagetti.component';
-import {MenuDrinksComponent} from './menu-drinks/menu-drinks.component';
-import {MenuComponent} from './menu/menu.component';
-import {DrinksDetailsComponent} from './drinks-details/drinks-details.component';
-import {PizzasDetailsComponent} from './pizzas-details/pizzas-details.component';
-import {SpagettiDetailsComponent} from './spagetti-details/spagetti-details.component';
+import {MenuPizzaComponent} from './menuDir/menu-pizza/menu-pizza.component';
+import {MenuSpagettiComponent} from './menuDir/menu-spagetti/menu-spagetti.component';
+import {MenuDrinksComponent} from './menuDir/menu-drinks/menu-drinks.component';
+import {MenuComponent} from './menuDir/menu/menu.component';
+import {DrinksDetailsComponent} from './dishDetailsDir/drinks-details/drinks-details.component';
+import {PizzasDetailsComponent} from './dishDetailsDir/pizzas-details/pizzas-details.component';
+import {SpagettiDetailsComponent} from './dishDetailsDir/spagetti-details/spagetti-details.component';
 import {OrderComponent} from './order/order.component';
-import {AdminOrdersComponent} from './admin-orders/admin-orders.component';
-import {AdminOrderDetailsComponent} from './admin-order-details/admin-order-details.component';
-import {AdminDishesComponent} from './admin-dishes/admin-dishes.component';
+import {AdminOrdersComponent} from './adminViewsDir/admin-orders/admin-orders.component';
+import {AdminOrderDetailsComponent} from './adminViewsDir/admin-order-details/admin-order-details.component';
+import {AdminDishesComponent} from './adminViewsDir/admin-dishes/admin-dishes.component';
 import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [

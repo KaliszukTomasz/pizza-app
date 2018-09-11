@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Dish} from './dish';
+import {Dish} from '../shared/dish';
 import {Observable, Subject} from 'rxjs';
-import {Order} from './order';
-import {Account} from '../models/account';
+import {Order} from '../shared/order';
+import {Account} from '../shared/account';
 
 @Injectable({
   providedIn: 'root'
