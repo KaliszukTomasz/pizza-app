@@ -14,7 +14,6 @@ import {DrinksDetailsComponent} from './dishDetailsDir/drinks-details/drinks-det
 import {PizzasDetailsComponent} from './dishDetailsDir/pizzas-details/pizzas-details.component';
 import {SpagettiDetailsComponent} from './dishDetailsDir/spagetti-details/spagetti-details.component';
 import { OrderComponent } from './order/order.component';
-import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AdminOrdersComponent } from './adminViewsDir/admin-orders/admin-orders.component';
 import { AdminOrderDetailsComponent } from './adminViewsDir/admin-order-details/admin-order-details.component';
@@ -34,7 +33,6 @@ import { LoginComponent } from './login/login.component';
     PizzasDetailsComponent,
     SpagettiDetailsComponent,
     OrderComponent,
-    SuccessAlertComponent,
     NavBarComponent,
     AdminOrdersComponent,
     AdminOrderDetailsComponent,

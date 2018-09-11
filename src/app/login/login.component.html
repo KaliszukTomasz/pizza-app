@@ -1,10 +1,13 @@
 <div class="formContainer">
-  <h3>Logowanie</h3>
-  <label for="login">Login:</label>
-  <input [(ngModel)]="userAccount.login" type="text" id="login" name="login" placeholder="Twój login...">
+  <form>
+    <h3>Logowanie</h3>
+    <label for="login">Login:</label>
+    <input [(ngModel)]="userAccount.login" type="text" id="login" name="login" placeholder="Twój login...">
 
-  <label for="password">Hasło:</label>
-  <input [(ngModel)]="userAccount.password" type="text" id="password" name="password" placeholder="Twoje hasło...">
-  <button (click)="checkIfAccountCorrect()" id="submit"> Zaloguj</button>
-  <button (click)="goBack()" id="back"> Wróć</button>
+    <label for="password">Hasło:</label>
+    <input [(ngModel)]="userAccount.password" type="text" id="password" name="password" placeholder="Twoje hasło...">
+    <button *ngIf="valid()" (click)="checkIfAccountCorrect()" id="submit"> Zaloguj</button>
+    <button *ngIf="!valid()" (click)="validationError()" id="desactivated"> Zaloguj</button>
+    <button (click)="goBack()" id="back"> Wróć</button>
+  </form>
 </div>

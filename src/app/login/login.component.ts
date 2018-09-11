@@ -3,6 +3,8 @@ import {MenuService} from '../service/menu.service';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {Account} from '../shared/account';
+import {AuthenticationService} from '../service/authentication.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -18,29 +20,46 @@ export class LoginComponent implements OnInit {
   };
   loginStatus: boolean = false;
 
-  constructor(private readonly menuService: MenuService, private router: Router, private location: Location) {
+  userData = new FormGroup({
+    login: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    password: new FormControl('', Validators.required)
+  });
+
+
+  constructor(private readonly menuService: MenuService,
+              private readonly authService: AuthenticationService,
+              private router: Router,
+              private location: Location) {
   }
 
   ngOnInit() {
-    this.menuService.getAccountFromDataBase().subscribe(acc => this.adminAccount = acc);
-    this.loginStatus = this.menuService.getAuthenticatedStatus();
+    this.authService.getAccountFromDataBase().subscribe(acc => this.adminAccount = acc);
+    this.loginStatus = this.authService.getAuthenticatedStatus();
   }
 
   checkIfAccountCorrect() {
     if (this.adminAccount.login === this.userAccount.login && this.adminAccount.password === this.userAccount.password) {
-      this.menuService.setAuthenticatedUser();
+      this.authService.setAuthenticatedUser();
       alert('Zostałeś zalogowany!');
       this.router.navigate(['admin/orders']);
 
     } else {
       this.userAccount.login = '';
       this.userAccount.password = '';
-      alert('Błędne dane logowania!');
+      alert('Brak użytkownika o takich danych!!');
 
     }
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  valid() {
+    return this.userAccount.password.length > 3 && this.userAccount.login.length > 3 ? true : false;
+  }
+
+  validationError() {
+    alert('Wprowadź wszystkie dane!');
   }
 }

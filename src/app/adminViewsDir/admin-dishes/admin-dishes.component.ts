@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {MenuService} from '../../service/menu.service';
 import {Dish} from '../../shared/dish';
 import {DishType} from '../../shared/dishType';
+import {AdminService} from '../../service/admin.service';
 
 @Component({
   selector: 'app-admin-dishes',
@@ -15,7 +16,8 @@ export class AdminDishesComponent implements OnInit {
   pizzas: Dish[];
   spagetti: Dish[];
 
-  constructor(private readonly menuService: MenuService) {
+  constructor(private readonly menuService: MenuService,
+              private readonly adminService: AdminService) {
   }
 
   ngOnInit() {
@@ -32,13 +34,13 @@ export class AdminDishesComponent implements OnInit {
     }
 
     if (dish.type === 'pizza') {
-      this.menuService.sendNewAvailabilityOfPizza(dish);
+      this.adminService.sendNewAvailabilityOfPizza(dish);
     }
     if (dish.type === 'spagetti') {
-      this.menuService.sendNewAvailabilityOfSpagetti(dish);
+      this.adminService.sendNewAvailabilityOfSpagetti(dish);
     }
     if (dish.type === 'drink') {
-      this.menuService.sendNewAvailabilityOfDrink(dish);
+      this.adminService.sendNewAvailabilityOfDrink(dish);
     }
   }
 }

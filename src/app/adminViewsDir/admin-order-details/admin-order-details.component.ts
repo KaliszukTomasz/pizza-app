@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {MenuService} from '../../service/menu.service';
 import {Location} from '@angular/common';
 import {Order} from '../../shared/order';
+import {AdminService} from '../../service/admin.service';
 
 @Component({
   selector: 'app-admin-order-details',
@@ -14,13 +15,13 @@ export class AdminOrderDetailsComponent implements OnInit {
   order: Order;
 
   constructor(private readonly route: ActivatedRoute,
-              private readonly service: MenuService,
-              private readonly location: Location,) {
+              private readonly location: Location,
+              private readonly adminService: AdminService) {
   }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.service.getOneOrder(+id)
+    this.adminService.getOneOrder(+id)
       .subscribe(res => this.order = res);
   }
 

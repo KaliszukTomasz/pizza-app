@@ -12,7 +12,14 @@
   display: inline-block;
   justify-items: center;
   border-radius: 10px;
+  align-content: center;
 }
+.yourOrderPanel{
+  display: grid;}
+.yourOrderPanel th {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 .rightPanel {
   background: #fffd96;
@@ -94,7 +101,19 @@
     background-color: #4CAF50;
   }
 }
+#submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 
+}
+
+#submit:hover {
+  background-color: #45a049;
+}
 .formContainer {
   border-radius: 5px;
   padding: 30px;
@@ -114,8 +133,10 @@
     resize: vertical;
   }
 
- #submit {
-    background-color: #4CAF50;
+
+
+  #desactivated {
+    background-color: #86af84;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -124,22 +145,23 @@
 
   }
 
-  #submit:hover {
-    background-color: #45a049;
+  #desactivated:hover {
+    background-color: #7ea082;
   }
 
-  #back {
-    background-color: #af4900;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
 
-  #back:hover {
-    background-color: #a03209;
-  }
 
+}
+#back {
+  background-color: #af4900;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#back:hover {
+  background-color: #a03209;
 }
 

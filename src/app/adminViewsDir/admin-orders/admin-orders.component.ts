@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuService} from '../../service/menu.service';
 import {Order} from '../../shared/order';
+import {AdminService} from '../../service/admin.service';
 
 @Component({
   selector: 'app-admin-orders',
@@ -11,18 +12,19 @@ export class AdminOrdersComponent implements OnInit {
 
   orders: Order[];
 
-  constructor(private readonly menuService: MenuService) {
+  constructor(private readonly menuService: MenuService,
+              private readonly adminService: AdminService) {
   }
 
   ngOnInit() {
-    this.menuService.getOrders().subscribe(order => {
+    this.adminService.getOrders().subscribe(order => {
       this.orders = order;
     });
   }
 
   changeToDoneStatus(order: Order) {
     order.status = true;
-    this.menuService.changeStatusOrderToDone(order);
+    this.adminService.changeStatusOrderToDone(order);
   }
 
 }

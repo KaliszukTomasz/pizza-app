@@ -27,7 +27,7 @@
     {
       "id": 4,
       "name": "Pizza 4",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
       "price": "23.50"
@@ -45,7 +45,7 @@
     {
       "id": 2,
       "name": "Spagetti Bolognese",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński",
       "type": "spagetti",
       "price": "14"
@@ -91,7 +91,7 @@
       "id": 19
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -139,7 +139,7 @@
       "id": 25
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -155,7 +155,7 @@
       "id": 27
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -442,7 +442,7 @@
       "id": 2
     },
     {
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 3
     },
@@ -764,6 +764,23 @@
         }
       ],
       "id": 19
+    },
+    {
+      "firstName": "sad",
+      "status": false,
+      "dishes": [],
+      "id": 20
+    },
+    {
+      "status": false,
+      "dishes": [],
+      "id": 21
+    },
+    {
+      "firstName": "sad",
+      "status": true,
+      "dishes": [],
+      "id": 22
     }
   ],
   "users": [

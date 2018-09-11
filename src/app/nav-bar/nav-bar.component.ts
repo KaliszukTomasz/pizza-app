@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuService} from '../service/menu.service';
 import {Observable} from 'rxjs';
+import {AuthenticationService} from '../service/authentication.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,18 +12,19 @@ export class NavBarComponent implements OnInit {
 
   authenticated: boolean = false;
 
-  constructor(readonly menuService: MenuService) {
+  constructor(readonly menuService: MenuService,
+              readonly authService: AuthenticationService) {
   }
 
   ngOnInit() {
-    this.authenticated = this.menuService.getAuthenticatedStatus();
+    this.authenticated = this.authService.getAuthenticatedStatus();
   }
 
   getAuthStatus() {
-    return this.menuService.getAuthenticatedStatus();
+    return this.authService.getAuthenticatedStatus();
   }
 
   logout() {
-    this.menuService.setUnauthenticatedUser();
+    this.authService.setUnauthenticatedUser();
   }
 }

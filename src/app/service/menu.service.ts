@@ -13,8 +13,6 @@ export class MenuService {
   dishes$ = new Subject<Dish[]>();
   private dishesInBasket$ = new Subject<Dish[]>();
   dishesInBasket: Dish[] = [];
-  authenticated: boolean = false;
-  // authenticated2: Observable<boolean>;
 
   constructor(readonly httpClient: HttpClient) {
   }
@@ -67,50 +65,5 @@ export class MenuService {
     return sumCount;
   }
 
-  getOrders(): Observable<Order[]> {
-    return this.httpClient.get<Order[]>('http://localhost:3000/orders');
-  }
-
-  changeStatusOrderToDone(order: Order) {
-    const id: number = order.id;
-    return this.httpClient.put(`http://localhost:3000/orders/${id}`, order).subscribe(res => console.log(res));
-  }
-
-  getOneOrder(id: number): Observable<Order> {
-    return this.httpClient.get<Order>(`http://localhost:3000/orders/${id}`);
-
-  }
-
-  sendNewAvailabilityOfPizza(dish: Dish) {
-    const id: number = dish.id;
-    return this.httpClient.put(`http://localhost:3000/pizzas/${id}`, dish).subscribe();
-  }
-
-  sendNewAvailabilityOfSpagetti(dish: Dish) {
-    const id: number = dish.id;
-    return this.httpClient.put(`http://localhost:3000/spagetti/${id}`, dish).subscribe();
-  }
-
-  sendNewAvailabilityOfDrink(dish: Dish) {
-    const id: number = dish.id;
-    return this.httpClient.put(`http://localhost:3000/drinks/${id}`, dish).subscribe();
-  }
-
-  getAccountFromDataBase(): Observable<Account> {
-    return this.httpClient.get<Account>('http://localhost:3000/users/1');
-
-  }
-
-  setAuthenticatedUser() {
-    this.authenticated = true;
-  }
-
-  setUnauthenticatedUser() {
-    this.authenticated = false;
-  }
-
-  getAuthenticatedStatus(): boolean {
-    return this.authenticated;
-  }
 }
 
