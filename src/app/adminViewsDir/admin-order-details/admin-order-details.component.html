@@ -1,3 +1,4 @@
+<div id="border">
 
 <h2>Id zamówienia: {{order?.id}}</h2>
 <h3>Imię: {{order?.firstName}}</h3>
@@ -7,6 +8,7 @@
 <h3>Opis: {{order?.subject}}</h3>
 <h2>Zamówione dania:</h2>
 <h3>
+
   <table>
     <tr>
       <td>Lp.</td>
@@ -26,5 +28,6 @@
     </tr>
   </table>
 </h3>
-<button (click)="goBack()">Powrót</button>
+<button (click)="goBack()" id="back">Powrót</button>
 
+</div>

@@ -7,20 +7,22 @@
     <div class="formContainer">
       <h3>Formularz kontaktowy</h3>
 
-      <label for="fname">Imię zamawiającego:</label>
+      <label for="fname">Imię zamawiającego:*</label>
       <input [(ngModel)]="order.firstName" type="text" id="fname" name="firstname" placeholder="Twoje imię...">
 
-      <label for="lname">Nazwisko zamawiającego:</label>
+      <label for="lname">Nazwisko zamawiającego:*</label>
       <input [(ngModel)]="order.lastName" type="text" id="lname" name="lastname" placeholder="Twoje nazwisko...">
 
-      <label for="address">Adres dostawy:</label>
+      <label for="address">Adres dostawy:*</label>
       <input [(ngModel)]="order.address" type="text" id="address" name="address" placeholder="Twój adres...">
 
       <label for="subject">Komentarz:</label>
       <textarea [(ngModel)]="order.subject" id="subject" name="subject" placeholder="Komentarz do zamówienia..."
                 style="height:200px"></textarea>
 
-      <button (click)="sendOrderToBase()" id="submit"> Zamów</button>
+      <!--<button (click)="sendOrderToBase()" id="submit"> Zamów</button>-->
+      <button  *ngIf="valid()" (click)="sendOrderToBase()" id="submit"> Zaloguj</button>
+      <button  *ngIf="!valid()" (click)="validationError()" id="desactivated"> Zaloguj</button>
       <button (click)="goBack()" id="back"> Wróć</button>
       <h2 *ngIf="confirmed === true">Twoje zamówienie zostało wysłane! Zapraszamy ponownie </h2>
 
