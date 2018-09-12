@@ -20,6 +20,7 @@ import { AdminOrderDetailsComponent } from './adminViewsDir/admin-order-details/
 import { AdminDishesComponent } from './adminViewsDir/admin-dishes/admin-dishes.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import {RoleGuard} from './shared/roleGuard';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [RoleGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

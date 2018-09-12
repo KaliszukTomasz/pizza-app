@@ -12,6 +12,7 @@ import {AdminOrdersComponent} from './adminViewsDir/admin-orders/admin-orders.co
 import {AdminOrderDetailsComponent} from './adminViewsDir/admin-order-details/admin-order-details.component';
 import {AdminDishesComponent} from './adminViewsDir/admin-dishes/admin-dishes.component';
 import {LoginComponent} from './login/login.component';
+import {RoleGuard} from './shared/roleGuard';
 
 const routes: Routes = [
   {path: 'pizzas', component: MenuPizzaComponent},
@@ -22,9 +23,9 @@ const routes: Routes = [
   {path: 'spagetti/:id', component: SpagettiDetailsComponent},
   {path: 'pizzas/:id', component: PizzasDetailsComponent},
   {path: 'order', component: OrderComponent},
-  {path: 'admin/orders', component: AdminOrdersComponent},
-  {path: 'admin/orders/:id', component: AdminOrderDetailsComponent},
-  {path: 'admin/dishes', component: AdminDishesComponent},
+  {path: 'admin/orders', component: AdminOrdersComponent, canActivate: [RoleGuard]},
+  {path: 'admin/orders/:id', component: AdminOrderDetailsComponent, canActivate: [RoleGuard]},
+  {path: 'admin/dishes', component: AdminDishesComponent, canActivate: [RoleGuard]},
   {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: 'menu'},
 ];
