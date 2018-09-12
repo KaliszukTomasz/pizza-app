@@ -1,30 +1,27 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MenuService} from '../service/menu.service';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {Account} from '../shared/account';
 import {AuthenticationService} from '../service/authentication.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
+  private readonly destroy$ = new Subject();
   adminAccount: Account;
   userAccount: Account = {
     login: '',
     password: ''
   };
   loginStatus: boolean = false;
-
-  userData = new FormGroup({
-    login: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    password: new FormControl('', Validators.required)
-  });
-
 
   constructor(private readonly menuService: MenuService,
               private readonly authService: AuthenticationService,
@@ -33,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.authService.getAccountFromDataBase().subscribe(acc => this.adminAccount = acc);
+    this.authService.getAccountFromDataBase().pipe(takeUntil(this.destroy$)).subscribe(acc => this.adminAccount = acc);
     this.loginStatus = this.authService.getAuthenticatedStatus();
   }
 
@@ -61,5 +58,10 @@ export class LoginComponent implements OnInit {
 
   validationError() {
     alert('Wprowadź wszystkie dane!');
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

@@ -10,8 +10,6 @@ import {Account} from '../shared/account';
 })
 export class MenuService {
 
-  dishes$ = new Subject<Dish[]>();
-  private dishesInBasket$ = new Subject<Dish[]>();
   dishesInBasket: Dish[] = [];
 
   constructor(readonly httpClient: HttpClient) {
@@ -32,7 +30,6 @@ export class MenuService {
 
 
   getSpagetti(): Observable<Dish[]> {
-    // this.httpClient.get<Dish[]>('http://localhost:3000/spagetti').subscribe(dishes => this.dishes$.next(dishes));
     return this.httpClient.get<Dish[]>('http://localhost:3000/spagetti');
   }
 
@@ -56,7 +53,6 @@ export class MenuService {
 
   addToBasket(dish: Dish): void {
     this.dishesInBasket.push(dish);
-    // this.dishesInBasket$.next(this.dishesInBasket);
   }
 
   getSumCountInBasket(): number {

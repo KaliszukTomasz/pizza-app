@@ -11,13 +11,6 @@ import {DishType} from '../../shared/dishType';
 })
 export class MenuComponent implements OnInit {
 
-  // private destroy$: Subject<void> = new Subject<void>();
-  // ngOnDestroy(){
-  //   this.destroy$.next();
-  //   this.destroy$.complete();
-  // }
-
-
   dishType: DishType = DishType.PIZZA;
   dishes: Dish[];
   spagetti: Dish[];

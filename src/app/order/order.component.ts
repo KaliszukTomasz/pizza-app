@@ -20,6 +20,7 @@ export class OrderComponent implements OnInit {
 
   ngOnInit() {
     this.confirmed = false;
+    this.order.firstName = '';
   }
 
 
@@ -41,5 +42,13 @@ export class OrderComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  valid() {
+    return this.order.firstName.length > 3 && this.order.lastName.length > 3 && this.order.address.length > 4 ? true : false;
+  }
+
+  validationError() {
+    alert('Wprowadź odpowiednie dane!');
   }
 }

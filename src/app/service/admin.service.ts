@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Order} from '../shared/order';
 import {Dish} from '../shared/dish';
@@ -9,9 +9,8 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AdminService {
 
-  constructor(readonly httpClient: HttpClient) { }
-
-
+  constructor(readonly httpClient: HttpClient) {
+  }
 
   getOrders(): Observable<Order[]> {
     return this.httpClient.get<Order[]>('http://localhost:3000/orders');
