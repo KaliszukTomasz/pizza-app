@@ -1,19 +1,18 @@
 <table class="menuDishes">
   <tr>
-    <td id="idWidth">Id</td>
-    <td id="idName">Name</td>
-    <!--<td id="idType">Type</td>-->
-    <td id="idDescription">Description</td>
-    <td id="idPrice">Price</td>
+    <th id="idWidth">Id</th>
+    <th id="idName">Name</th>
+    <th id="idDescription">Description</th>
+    <th id="idPrice">Price</th>
   </tr>
   <tr *ngFor="let drink of filteredDrinks">
     <td id="id">{{drink?.id}}</td>
     <td id="name">{{drink?.name}}</td>
     <td id="description">{{drink?.description}}</td>
     <td id="price">{{drink?.price}}</td>
-    <button [routerLink]="['/drinks', drink?.id]"> details</button>
+    <a (click)="addToBasket(drink)"><img class="menu" src="/assets/add.png" ></a>
+    <a [routerLink]="['/drinks', drink?.id]"><img class="menu" src="/assets/details.png" ></a>
 
-    <button (click)="addToBasket(drink)"> add</button>
 
   </tr>
 </table>

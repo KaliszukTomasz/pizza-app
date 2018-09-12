@@ -24,6 +24,8 @@
 }
 
 .module {
+  font-size: 25px;
+  font-style: oblique;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,12 +34,14 @@
   min-height: 40px;
   max-height: 50px;
   min-width: 100px;
-  background-color: #607d8b;
-  border-radius: 1px;
+  background-color: #607d8b8c;
+  //background-color: #607d8b;
+  border-radius: 5px;
 }
 
 .module:hover {
-  background-color: #eee;
+  background-color: rgba(96, 125, 139, 0.44);
+  //background-color: #eee;
   cursor: pointer;
   color: #607d8b;
 }

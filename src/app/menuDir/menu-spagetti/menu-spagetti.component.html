@@ -1,9 +1,9 @@
 <table class="menuDishes">
   <tr>
-    <td>Id</td>
-    <td>Name</td>
-    <td>Description</td>
-    <td>Price</td>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
   </tr>
 
   <tr *ngFor="let spageti of filteredSpagetti">
@@ -11,8 +11,8 @@
     <td id="name">{{spageti?.name}}</td>
     <td id="description">{{spageti?.description}}</td>
     <td id="price">{{spageti?.price}}</td>
-    <button [routerLink]="['/spagetti', spageti?.id]">details</button>
-    <button (click)="addToBasket(spageti)"> add</button>
+    <a (click)="addToBasket(spageti)"><img class="menu" src="/assets/add.png" ></a>
+    <a [routerLink]="['/spagetti', spageti?.id]"><img class="menu" src="/assets/details.png" ></a>
   </tr>
 
 </table>

@@ -1,15 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #424240ed;
+  background-image: url("assets/image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .bothPanels {
   display: flex;
   justify-content: space-around;
   overflow: auto;
+
 }
 
 .leftPanel {
-  background: #c25fff;
+  background: #ff980059;
+  //background: #c25fff;
   min-height: 340px;
+  min-width: 230px;
   height: auto;
   width: 35%;
+  max-width: 700px;
   display: inline-block;
   justify-items: center;
   border-radius: 10px;
@@ -17,8 +27,11 @@
 }
 
 .rightPanel {
-  background: #fffd96;
+  background: #60642478;
+  //background: #fffd96;
   width: 65%;
+  max-width: 1300px;
+  min-width: 420px;
   height: auto;
   border-radius: 10px;
   display: inline-block;
@@ -26,6 +39,7 @@
 }
 
 .menuDishes {
+  color: #ffffff;
   #id {
     width: 5px;
   }
@@ -54,10 +68,11 @@
     position: fixed;
     top: 0;
     width: 100%;
+    font-size: 25px;
   }
 
   img {
-    width: 36px;
+    width: 40px;
     margin-top: -10px;
     margin-bottom: -10px;
 
@@ -114,7 +129,14 @@
   padding: 30px;
   h3 {
     text-align: center;
-    margin: auto
+    margin: auto;
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  label{
+    font-size: 20px;
+    color: #ffffff;
   }
 
   input[type=text], select, textarea {
@@ -160,3 +182,17 @@
   background-color: #a03209;
 }
 
+img.menu {
+  height: 21px;
+  margin-right: 10px;
+}
+
+.loginView label{
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.loginView h3{
+  font-size: 40px;
+  color: #ffffff;
+}

@@ -1,10 +1,10 @@
 
 <table class="menuDishes">
   <tr>
-    <td>Id</td>
-    <td>Name</td>
-    <td>Description</td>
-    <td>Price</td>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
   </tr>
 
   <tr *ngFor="let pizza of filteredPizzas">
@@ -12,11 +12,8 @@
     <td id="name">{{pizza?.name}}</td>
     <td id="description">{{pizza?.description}}</td>
     <td id="price">{{pizza?.price}}</td>
-    <button [routerLink]="['/pizzas', pizza?.id]">
-      details
-    </button>
-    <button (click)="addToBasket(pizza)">
-      add
-    </button>
+    <a (click)="addToBasket(pizza)"><img class="menu" src="/assets/add.png" ></a>
+    <a [routerLink]="['/pizzas', pizza?.id]"><img class="menu" src="/assets/details.png" ></a>
+
   </tr>
 </table>
