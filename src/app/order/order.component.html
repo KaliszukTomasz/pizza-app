@@ -20,9 +20,8 @@
       <textarea [(ngModel)]="order.subject" id="subject" name="subject" placeholder="Komentarz do zamówienia..."
                 style="height:200px"></textarea>
 
-      <!--<button (click)="sendOrderToBase()" id="submit"> Zamów</button>-->
-      <button  *ngIf="valid()" (click)="sendOrderToBase()" id="submit"> Zaloguj</button>
-      <button  *ngIf="!valid()" (click)="validationError()" id="desactivated"> Zaloguj</button>
+      <button *ngIf="valid()" (click)="sendOrderToBase()" id="submit"> Zamów</button>
+      <button *ngIf="!valid()" (click)="validationError()" id="desactivated"> Zamów</button>
       <button (click)="goBack()" id="back"> Wróć</button>
       <h2 *ngIf="confirmed === true">Twoje zamówienie zostało wysłane! Zapraszamy ponownie </h2>
 

@@ -45,7 +45,7 @@ export class OrderComponent implements OnInit {
   }
 
   valid() {
-    return this.order.firstName.length > 3 && this.order.lastName.length > 3 && this.order.address.length > 4 ? true : false;
+    return this.order.firstName.length > 3 && this.order.lastName.length > 3 && this.order.address.length > 4;
   }
 
   validationError() {

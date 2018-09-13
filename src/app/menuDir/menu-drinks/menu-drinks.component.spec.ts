@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuDrinksComponent } from './menu-drinks.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClient, HttpHandler} from '@angular/common/http';
 
 describe('MenuDrinksComponent', () => {
   let component: MenuDrinksComponent;
@@ -8,7 +10,9 @@ describe('MenuDrinksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MenuDrinksComponent ]
+      declarations: [ MenuDrinksComponent ],
+      imports: [ RouterTestingModule ],
+      providers: [ HttpClient, HttpHandler ]
     })
     .compileComponents();
   }));

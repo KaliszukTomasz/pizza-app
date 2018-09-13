@@ -4,7 +4,6 @@ import {MenuService} from '../../service/menu.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
 
-
 @Component({
   selector: 'app-menu-pizza',
   templateUrl: './menu-pizza.component.html',

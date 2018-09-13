@@ -5,7 +5,7 @@ import {AdminDishesComponent} from '../admin-dishes/admin-dishes.component';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 
-fdescribe('AdminOrdersComponent', () => {
+describe('AdminOrdersComponent', () => {
   let component: AdminOrdersComponent;
   let fixture: ComponentFixture<AdminOrdersComponent>;
 
