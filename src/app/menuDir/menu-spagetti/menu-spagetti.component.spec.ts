@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuSpagettiComponent } from './menu-spagetti.component';
 import {RouterTestingModule} from '@angular/router/testing';
-import {HttpClient, HttpHandler} from '@angular/common/http';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 
 describe('MenuSpagettiComponent', () => {
   let component: MenuSpagettiComponent;
@@ -11,8 +11,7 @@ describe('MenuSpagettiComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MenuSpagettiComponent ],
-      imports: [ RouterTestingModule ],
-      providers: [ HttpClient, HttpHandler ]
+      imports: [ RouterTestingModule, HttpClientModule]
     })
     .compileComponents();
   }));

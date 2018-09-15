@@ -26,14 +26,14 @@ export class OrderComponent implements OnInit {
 
   sendOrderToBase() {
     this.order.status = false;
-    this.order.dishes = this.menuService.dishesInBasket;
+    this.order.dishes = this.menuService.getDishesInBasket();
     this.menuService.addNewOrder(this.order);
     this.clearBasket();
   }
 
   clearBasket() {
     this.confirmed = true;
-    this.menuService.dishesInBasket = [];
+    this.menuService.clearBasket();
     this.order.firstName = '';
     this.order.lastName = '';
     this.order.subject = '';
@@ -48,7 +48,5 @@ export class OrderComponent implements OnInit {
     return this.order.firstName.length > 3 && this.order.lastName.length > 3 && this.order.address.length > 4;
   }
 
-  validationError() {
-    alert('Wprowadź odpowiednie dane!');
-  }
+
 }

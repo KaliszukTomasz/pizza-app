@@ -15,6 +15,13 @@ export class MenuService {
   constructor(readonly httpClient: HttpClient) {
   }
 
+  clearBasket(): void {
+    this.dishesInBasket = [];
+  }
+  getDishesInBasket(): Dish[] {
+    return this.dishesInBasket;
+  }
+
   getPizzas(): Observable<Dish[]> {
     return this.httpClient.get<Dish[]>('http://localhost:3000/pizzas');
   }
@@ -23,24 +30,20 @@ export class MenuService {
     return this.httpClient.get<Dish[]>('http://localhost:3000/drinks');
   }
 
-  getOneDrink(id: number): Observable<Dish> {
-    return this.httpClient.get<Dish>(`http://localhost:3000/drinks/${id}`);
-
-  }
-
-
   getSpagetti(): Observable<Dish[]> {
     return this.httpClient.get<Dish[]>('http://localhost:3000/spagetti');
   }
 
+  getOneDrink(id: number): Observable<Dish> {
+    return this.httpClient.get<Dish>(`http://localhost:3000/drinks/${id}`);
+  }
+
   getOneSpagetti(id: number): Observable<Dish> {
     return this.httpClient.get<Dish>(`http://localhost:3000/spagetti/${id}`);
-
   }
 
   getOnePizza(id: number): Observable<Dish> {
     return this.httpClient.get<Dish>(`http://localhost:3000/pizzas/${id}`);
-
   }
 
   addNewDish(newSpagetti): void {
@@ -60,6 +63,4 @@ export class MenuService {
     this.dishesInBasket.forEach(value => sumCount = +sumCount + +value.price);
     return sumCount;
   }
-
 }
-

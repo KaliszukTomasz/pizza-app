@@ -4,7 +4,6 @@ import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {Account} from '../shared/account';
 import {AuthenticationService} from '../service/authentication.service';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 

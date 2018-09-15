@@ -2,22 +2,22 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {MenuPizzaComponent} from './menu-pizza.component';
 import {RouterTestingModule} from '@angular/router/testing';
-import {HttpClient, HttpHandler} from '@angular/common/http';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 import {MenuService} from '../../service/menu.service';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {Dish} from '../../shared/dish';
+import createSpy = jasmine.createSpy;
 
 describe('MenuPizzaComponent', () => {
   let component: MenuPizzaComponent;
   let fixture: ComponentFixture<MenuPizzaComponent>;
-
+ `const variable2;`
   beforeEach(async(() => {
-    const menuServiceMock = jasmine.createSpyObj('MenuService', ['getPizzas']);
-    menuServiceMock.getPizzas.and.returnValue( new Observable<Dish[]>());
+
     TestBed.configureTestingModule({
       declarations: [MenuPizzaComponent],
-      imports: [RouterTestingModule],
-      providers: [HttpClient, HttpHandler, {provide: MenuService, useValue: menuServiceMock}]
+      imports: [RouterTestingModule, HttpClientModule],
+      providers: [MenuService]
     })
       .compileComponents();
   }));
@@ -29,6 +29,17 @@ describe('MenuPizzaComponent', () => {
   });
 
   it('should create', () => {
+    // const menuService = TestBed.get(MenuService);
+    // const variable2 = spyOn(menuService, 'getPizzas').and.returnValue(new Observable<Dish[]>());
+
+    // const menuService = TestBed.get(MenuService);
+    // const getAvailablePizzasSpy = spyOn(menuService, 'getPizzas').and.returnValue( new Observable<Dish[]>());
+    // const menuServiceMock = createSpy('MenuService', getPizzas);
+    // menuServiceMock.getPizzas.and.returnValue( new Observable<Dish[]>());
+    // const menuServiceMock = createSpy('MenuService', 'getPizzas').and.returnValue(new Observable<Dish[]>());
+    // const menuService = TestBed.get(MenuService);
+    // expect(variable2)
     expect(component).toBeTruthy();
+
   });
 });

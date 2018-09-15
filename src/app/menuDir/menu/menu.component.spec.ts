@@ -2,7 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {MenuComponent} from './menu.component';
 import {RouterTestingModule} from '@angular/router/testing';
-import {HttpClient, HttpHandler} from '@angular/common/http';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 import {YourOrderPanelComponent} from '../your-order-panel/your-order-panel.component';
 import {MenuDrinksComponent} from '../menu-drinks/menu-drinks.component';
 import {MenuPizzaComponent} from '../menu-pizza/menu-pizza.component';
@@ -14,8 +14,7 @@ describe('MenuComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [MenuComponent, YourOrderPanelComponent, MenuDrinksComponent, MenuPizzaComponent, MenuSpagettiComponent],
-      imports: [RouterTestingModule],
-      providers: [HttpClient, HttpHandler]
+      imports: [RouterTestingModule, HttpClientModule]
 
 
     })
