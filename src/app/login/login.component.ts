@@ -30,22 +30,26 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.authService.getAccountFromDataBase().pipe(takeUntil(this.destroy$)).subscribe(acc => this.adminAccount = acc);
+    this.authService.getAdminAccountFromDataBase().pipe(takeUntil(this.destroy$)).subscribe(acc => this.adminAccount = acc);
     this.loginStatus = this.authService.getAuthenticatedStatus();
   }
 
-  checkIfAccountCorrect() {
-    if (this.adminAccount.login === this.userAccount.login && this.adminAccount.password === this.userAccount.password) {
-      this.authService.setAuthenticatedUser();
-      setTimeout(() => {
-          this.router.navigate(['admin/orders']);
-        },
-        10);
+  loginUser() {
+    if (this.checkIfAccountCorrect()) {
+      this.router.navigate(['admin/orders']);
     } else {
       this.userAccount.login = '';
       this.userAccount.password = '';
       this.validationError();
+    }
+  }
 
+  checkIfAccountCorrect(): boolean {
+    if (this.adminAccount.login === this.userAccount.login && this.adminAccount.password === this.userAccount.password) {
+      this.authService.setAuthenticatedUser();
+      return true;
+    } else {
+      return false;
     }
   }
 

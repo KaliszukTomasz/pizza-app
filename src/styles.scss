@@ -5,6 +5,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .bothPanels {
   display: flex;
   justify-content: space-around;
@@ -111,6 +112,7 @@ body {
     background-color: #4CAF50;
   }
 }
+
 #submit {
   background-color: #4CAF50;
   color: white;
@@ -124,6 +126,7 @@ body {
 #submit:hover {
   background-color: #45a049;
 }
+
 .formContainer {
   border-radius: 5px;
   padding: 30px;
@@ -134,12 +137,12 @@ body {
     color: #ffffff;
   }
 
-  label{
+  label {
     font-size: 20px;
     color: #ffffff;
   }
 
-  input[type=text], select, textarea {
+  input[type=text], select, textarea, [type = password] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -149,8 +152,6 @@ body {
     margin-bottom: 16px;
     resize: vertical;
   }
-
-
 
   #desactivated {
     background-color: #86af84;
@@ -166,9 +167,8 @@ body {
     background-color: #7ea082;
   }
 
-
-
 }
+
 #back {
   background-color: #af4900;
   color: white;
@@ -187,16 +187,17 @@ img.menu {
   margin-right: 10px;
 }
 
-.loginView label{
+.loginView label {
   font-size: 25px;
   color: #ffffff;
 }
 
-.loginView h3{
+.loginView h3 {
   font-size: 40px;
   color: #ffffff;
 }
-#border{
+
+#border {
   border-radius: 10px;
   padding: 5em;
   min-width: 800px;

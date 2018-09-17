@@ -5,11 +5,10 @@
     <input [(ngModel)]="userAccount.login" type="text" id="login" name="login" placeholder="Twój login...">
 
     <label for="password">Hasło:</label>
-    <input [(ngModel)]="userAccount.password" type="text" id="password" name="password" placeholder="Twoje hasło...">
-    <button *ngIf="isFormValid()" (click)="checkIfAccountCorrect()" id="submit"> Zaloguj</button>
+    <input [(ngModel)]="userAccount.password" type="password" id="password" name="password" placeholder="Twoje hasło...">
+    <button *ngIf="isFormValid()" (click)="loginUser()" id="submit"> Zaloguj</button>
     <button *ngIf="!isFormValid()" (click)="validationError()" id="desactivated"> Zaloguj</button>
     <button (click)="goBack()" id="back"> Wróć</button>
-    <!--<h2 *ngIf="confirmed === true" class="confirmedMessage">Twoje zamówienie zostało wysłane! <br> Zapraszamy ponownie! </h2>-->
     <h2 *ngIf="errorCondition === true && !isFormValid()" class="errorMessage">Błędne dane logowania!<br> Proszę popraw je! </h2>
 
   </form>

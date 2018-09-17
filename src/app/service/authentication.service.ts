@@ -13,7 +13,7 @@ export class AuthenticationService {
   constructor(readonly httpClient: HttpClient) {
   }
 
-  getAccountFromDataBase(): Observable<Account> {
+  getAdminAccountFromDataBase(): Observable<Account> {
     return this.httpClient.get<Account>('http://localhost:3000/users/1');
   }
 
