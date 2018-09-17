@@ -6,7 +6,6 @@
   <div class="rightPanel">
     <div class="formContainer">
       <h3>Formularz kontaktowy</h3>
-
       <label for="fname">Imię zamawiającego:*</label>
       <input [(ngModel)]="order.firstName" type="text" id="fname" name="firstname" placeholder="Twoje imię...">
 
@@ -20,10 +19,11 @@
       <textarea [(ngModel)]="order.subject" id="subject" name="subject" placeholder="Komentarz do zamówienia..."
                 style="height:200px"></textarea>
 
-      <button *ngIf="valid()" (click)="sendOrderToBase()" id="submit"> Zamów</button>
-      <button *ngIf="!valid()" (click)="validationError()" id="desactivated"> Zamów</button>
+      <button *ngIf="isFormValid()" (click)="sendOrderToBase()" id="submit"> Zamów</button>
+      <button *ngIf="!isFormValid()" (click)="showValidationError()" id="desactivated"> Zamów</button>
       <button (click)="goBack()" id="back"> Wróć</button>
-      <h2 *ngIf="confirmed === true">Twoje zamówienie zostało wysłane! Zapraszamy ponownie </h2>
+      <h2 *ngIf="confirmed === true" class="confirmedMessage">Twoje zamówienie zostało wysłane! <br> Zapraszamy ponownie! </h2>
+      <h2 *ngIf="errorCondition === true && !isFormValid()" class="errorMessage">Błędne dane zamówienia!<br> Proszę popraw je! </h2>
 
     </div>
   </div>

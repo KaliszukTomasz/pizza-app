@@ -59,7 +59,7 @@
       "price": "17.50"
     },
     {
-      "isAvailable": false,
+      "isAvailable": true,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -243,7 +243,7 @@
       "id": 38
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -267,7 +267,7 @@
       "id": 41
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -291,7 +291,7 @@
       "id": 44
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -315,7 +315,7 @@
       "id": 47
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -339,7 +339,7 @@
       "id": 50
     },
     {
-      "isAvailable": true,
+      "isAvailable": false,
       "price": 20,
       "name": "noweDanie",
       "description": "nowy opis",
@@ -391,68 +391,12 @@
   ],
   "orders": [
     {
-      "address": "NowaUlica",
-      "firstName": "Kaliszuk",
-      "subject": "Komentarz",
-      "status": true,
-      "dishes": [
-        {
-          "id": 1,
-          "name": "Pizza Margherita",
-          "isAvailable": true,
-          "description": "Sos, ser",
-          "type": "pizza",
-          "price": "22"
-        },
-        {
-          "id": 1,
-          "name": "Pizza Margherita",
-          "isAvailable": true,
-          "description": "Sos, ser",
-          "type": "pizza",
-          "price": "22"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "address": "ADres",
-      "firstName": "Nowy",
-      "lastName": "Nazwikso",
-      "subject": "Koment",
-      "status": true,
-      "dishes": [
-        {
-          "id": 1,
-          "name": "Pizza Margherita",
-          "isAvailable": true,
-          "description": "Sos, ser",
-          "type": "pizza",
-          "price": "22"
-        },
-        {
-          "id": 1,
-          "name": "Pizza Margherita",
-          "isAvailable": true,
-          "description": "Sos, ser",
-          "type": "pizza",
-          "price": "22"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "status": true,
-      "dishes": [],
-      "id": 3
-    },
-    {
       "status": true,
       "dishes": [],
       "id": 4
     },
     {
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 5
     },
@@ -470,7 +414,7 @@
       "firstName": "Nowygracz",
       "lastName": "asd",
       "subject": "sad",
-      "status": false,
+      "status": true,
       "dishes": [
         {
           "id": 3,
@@ -504,7 +448,7 @@
       "firstName": "asd",
       "lastName": "asd",
       "subject": "skf",
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 8
     },
@@ -513,7 +457,7 @@
       "firstName": "",
       "lastName": "",
       "subject": "",
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 9
     },
@@ -522,12 +466,12 @@
       "lastName": "asd",
       "address": "asd",
       "subject": "asd",
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 10
     },
     {
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 11
     },
@@ -565,7 +509,7 @@
       "id": 12
     },
     {
-      "status": false,
+      "status": true,
       "dishes": [
         {
           "id": 3,
@@ -598,7 +542,7 @@
       "firstName": "Tomsa",
       "lastName": "ASd",
       "address": "asd",
-      "status": false,
+      "status": true,
       "dishes": [
         {
           "id": 1,
@@ -645,56 +589,8 @@
       "id": 15
     },
     {
-      "firstName": "Tomas",
-      "address": "kndspifabek ;",
-      "status": true,
-      "dishes": [
-        {
-          "id": 1,
-          "name": "Pizza Margherita",
-          "isAvailable": true,
-          "description": "Sos, ser",
-          "type": "pizza",
-          "price": "22"
-        },
-        {
-          "id": 1,
-          "name": "Pizza Margherita",
-          "isAvailable": true,
-          "description": "Sos, ser",
-          "type": "pizza",
-          "price": "22"
-        },
-        {
-          "isAvailable": true,
-          "price": 20,
-          "name": "noweDanie",
-          "description": "nowy opis",
-          "type": "spagetti",
-          "id": 18
-        },
-        {
-          "isAvailable": true,
-          "price": 20,
-          "name": "noweDanie",
-          "description": "nowy opis",
-          "type": "spagetti",
-          "id": 18
-        },
-        {
-          "isAvailable": true,
-          "price": 20,
-          "name": "noweDanie",
-          "description": "nowy opis",
-          "type": "spagetti",
-          "id": 18
-        }
-      ],
-      "id": 16
-    },
-    {
       "firstName": "Tomasz",
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 17
     },
@@ -744,7 +640,7 @@
       "lastName": "asd",
       "address": "sad",
       "subject": "ads",
-      "status": false,
+      "status": true,
       "dishes": [
         {
           "id": 1,
@@ -766,13 +662,7 @@
       "id": 19
     },
     {
-      "firstName": "sad",
-      "status": false,
-      "dishes": [],
-      "id": 20
-    },
-    {
-      "status": false,
+      "status": true,
       "dishes": [],
       "id": 21
     },
@@ -781,6 +671,212 @@
       "status": true,
       "dishes": [],
       "id": 22
+    },
+    {
+      "firstName": "Toms",
+      "lastName": "asdas",
+      "address": "asdsasdasd",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 4,
+          "name": "Pizza 4",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        }
+      ],
+      "id": 23
+    },
+    {
+      "firstName": "Zuzia",
+      "lastName": "123123",
+      "address": "123123",
+      "status": false,
+      "dishes": [
+        {
+          "id": 3,
+          "name": "Fanta",
+          "isAvailable": true,
+          "description": "Kubek pysznej słodkiej fanty",
+          "type": "drink",
+          "price": "13.90"
+        },
+        {
+          "id": 3,
+          "name": "Fanta",
+          "isAvailable": true,
+          "description": "Kubek pysznej słodkiej fanty",
+          "type": "drink",
+          "price": "13.90"
+        },
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 23
+        },
+        {
+          "isAvailable": true,
+          "price": 20,
+          "name": "noweDanie",
+          "description": "nowy opis",
+          "type": "spagetti",
+          "id": 23
+        }
+      ],
+      "id": 24
+    },
+    {
+      "firstName": "Tomasz",
+      "lastName": "Kaliszuk",
+      "address": "Zamów",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        }
+      ],
+      "id": 25
+    },
+    {
+      "firstName": "123123123",
+      "address": "123123",
+      "lastName": "123123123",
+      "status": false,
+      "dishes": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "isAvailable": true,
+          "description": "Sos, ser",
+          "type": "pizza",
+          "price": "22"
+        },
+        {
+          "id": 2,
+          "name": "Pizza Funghi",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        },
+        {
+          "id": 2,
+          "name": "Pizza Funghi",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        },
+        {
+          "id": 2,
+          "name": "Pizza Funghi",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        },
+        {
+          "id": 2,
+          "name": "Pizza Funghi",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        }
+      ],
+      "id": 26
+    },
+    {
+      "firstName": "Tomasz",
+      "lastName": "Kaliszuk",
+      "address": "sadasd",
+      "status": false,
+      "dishes": [
+        {
+          "id": 2,
+          "name": "Pizza Funghi",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        },
+        {
+          "id": 3,
+          "name": "Pizza 3",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        },
+        {
+          "id": 4,
+          "name": "Pizza 4",
+          "isAvailable": true,
+          "description": "Sos, ser, pieczarki",
+          "type": "pizza",
+          "price": "23.50"
+        }
+      ],
+      "id": 27
+    },
+    {
+      "firstName": "asdasd",
+      "lastName": "asdasd",
+      "address": "asdasd",
+      "status": false,
+      "dishes": [],
+      "id": 28
+    },
+    {
+      "firstName": "asdasd",
+      "lastName": "asdasd",
+      "address": "asdsad",
+      "status": false,
+      "dishes": [],
+      "id": 29
+    },
+    {
+      "firstName": "Tomasz",
+      "lastName": "Kaliszuk",
+      "address": "Nowyadres",
+      "status": false,
+      "dishes": [],
+      "id": 30
+    },
+    {
+      "firstName": "asdasd",
+      "lastName": "asdasd",
+      "address": "asdasd",
+      "subject": "asd",
+      "status": false,
+      "dishes": [],
+      "id": 31
+    },
+    {
+      "firstName": "asdd",
+      "lastName": "asds",
+      "address": "asdef",
+      "status": true,
+      "dishes": [],
+      "id": 32
     }
   ],
   "users": [

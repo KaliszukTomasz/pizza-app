@@ -12,6 +12,7 @@ import {Location} from '@angular/common';
 export class OrderComponent implements OnInit {
   confirmed = false;
   order: Order = new Order();
+  errorCondition: boolean;
 
   constructor(private readonly menuService: MenuService,
               private router: Router,
@@ -25,6 +26,7 @@ export class OrderComponent implements OnInit {
 
 
   sendOrderToBase() {
+    this.errorCondition = false;
     this.order.status = false;
     this.order.dishes = this.menuService.getDishesInBasket();
     this.menuService.addNewOrder(this.order);
@@ -44,8 +46,13 @@ export class OrderComponent implements OnInit {
     this.location.back();
   }
 
-  valid() {
-    return this.order.firstName.length > 3 && this.order.lastName.length > 3 && this.order.address.length > 4;
+  isFormValid() {
+    return this.order.firstName && this.order.lastName && this.order.address &&
+      this.order.firstName.length > 3 && this.order.lastName.length > 3 && this.order.address.length > 4;
+  }
+
+  showValidationError() {
+    this.errorCondition = true;
   }
 
 

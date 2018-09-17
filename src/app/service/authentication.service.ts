@@ -8,14 +8,13 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AuthenticationService {
 
-  authenticated: boolean = false;
+  authenticated: boolean;
 
   constructor(readonly httpClient: HttpClient) {
   }
 
   getAccountFromDataBase(): Observable<Account> {
     return this.httpClient.get<Account>('http://localhost:3000/users/1');
-
   }
 
   setAuthenticatedUser() {

@@ -15,12 +15,13 @@ import {takeUntil} from 'rxjs/operators';
 export class LoginComponent implements OnInit, OnDestroy {
 
   private readonly destroy$ = new Subject();
+  errorCondition: boolean;
   adminAccount: Account;
   userAccount: Account = {
     login: '',
     password: ''
   };
-  loginStatus: boolean = false;
+  loginStatus: boolean;
 
   constructor(private readonly menuService: MenuService,
               private readonly authService: AuthenticationService,
@@ -36,13 +37,14 @@ export class LoginComponent implements OnInit, OnDestroy {
   checkIfAccountCorrect() {
     if (this.adminAccount.login === this.userAccount.login && this.adminAccount.password === this.userAccount.password) {
       this.authService.setAuthenticatedUser();
-      alert('Zostałeś zalogowany!');
-      this.router.navigate(['admin/orders']);
-
+      setTimeout(() => {
+          this.router.navigate(['admin/orders']);
+        },
+        10);
     } else {
       this.userAccount.login = '';
       this.userAccount.password = '';
-      alert('Brak użytkownika o takich danych!!');
+      this.validationError();
 
     }
   }
@@ -51,12 +53,12 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.location.back();
   }
 
-  valid() {
-    return this.userAccount.password.length > 3 && this.userAccount.login.length > 3 ? true : false;
+  isFormValid() {
+    return this.userAccount.password.length > 3 && this.userAccount.login.length > 3;
   }
 
   validationError() {
-    alert('Wprowadź wszystkie dane!');
+    this.errorCondition = true;
   }
 
   ngOnDestroy(): void {

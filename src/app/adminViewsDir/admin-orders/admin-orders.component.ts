@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MenuService} from '../../service/menu.service';
 import {Order} from '../../shared/order';
 import {AdminService} from '../../service/admin.service';
-import {Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 
 @Component({
@@ -20,6 +20,10 @@ export class AdminOrdersComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.loadOrders();
+  }
+
+  private loadOrders() {
     this.adminService.getOrders().pipe(takeUntil(this.destroy$)).subscribe(order => {
       this.orders = order;
     });
@@ -28,6 +32,14 @@ export class AdminOrdersComponent implements OnInit, OnDestroy {
   changeToDoneStatus(order: Order) {
     order.status = true;
     this.adminService.changeStatusOrderToDone(order);
+  }
+
+  deleteOrder(id: number) {
+    this.adminService.deleteOrder(id)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+      this.loadOrders();
+    });
   }
 
 

@@ -96,7 +96,7 @@ describe('OrderComponent', () => {
     component.order.address = 'address';
 
     // then
-    expect(component.valid()).toBe(true);
+    expect(component.isFormValid()).toBe(true);
   });
 
   it('method valid should return false, address under 4 signs', () => {
@@ -107,7 +107,7 @@ describe('OrderComponent', () => {
     component.order.address = 'add';
 
     // then
-    expect(component.valid()).toBe(false);
+    expect(component.isFormValid()).toBe(false);
   });
 
 

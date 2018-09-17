@@ -18,7 +18,7 @@ export class AdminService {
 
   changeStatusOrderToDone(order: Order) {
     const id: number = order.id;
-    return this.httpClient.put(`http://localhost:3000/orders/${id}`, order).subscribe(res => console.log(res));
+    return this.httpClient.put(`http://localhost:3000/orders/${id}`, order).subscribe();
   }
 
   getOneOrder(id: number): Observable<Order> {
@@ -38,5 +38,9 @@ export class AdminService {
   sendNewAvailabilityOfDrink(dish: Dish) {
     const id: number = dish.id;
     return this.httpClient.put(`http://localhost:3000/drinks/${id}`, dish).subscribe();
+  }
+
+  deleteOrder(id: number): Observable<void> {
+    return this.httpClient.delete<void>(`http://localhost:3000/orders/${id}`);
   }
 }

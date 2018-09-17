@@ -1,19 +1,21 @@
 <div id="border">
-<table>
-  <tr>
-    <td >Id</td>
-    <td >Adres</td>
-    <td >Status</td>
-    <td >Id dań</td>
-  </tr>
-  <tr *ngFor="let order of orders">
-    <td >{{order?.id}}</td>
-    <td >{{order?.address}}</td>
-    <td >{{order?.status}}</td>
-    <td ><span *ngFor="let item of order.dishes">{{item.id}}  </span></td>
+  <table>
+    <tr>
+      <td>Id</td>
+      <td>Adres</td>
+      <td>Status</td>
+      <td>Id dań</td>
+    </tr>
+    <tr *ngFor="let order of orders">
+      <td>{{order?.id}}</td>
+      <td>{{order?.address}}</td>
+      <td *ngIf="order?.status; else notDone">zrealizowane</td>
+      <td><span *ngFor="let item of order.dishes">{{item.id}}  </span></td>
 
-    <button (click)="changeToDoneStatus(order)">zrobione</button>
-    <button [routerLink]="['/admin/orders', order.id]">details</button>
-  </tr>
-</table>
+      <button (click)="changeToDoneStatus(order)">zrobione</button>
+      <button [routerLink]="['/admin/orders', order.id]">details</button>
+      <button (click)="deleteOrder(order.id)">usuń</button>
+    </tr>
+  </table>
 </div>
+<ng-template #notDone>do realizacji</ng-template>
