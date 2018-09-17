@@ -9,14 +9,9 @@ import {Dish} from '../shared/dish';
 import {Observable, of} from 'rxjs';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {Order} from '../shared/order';
-import any = jasmine.any;
-import createSpy = jasmine.createSpy;
-//
-// import 'rxjs/add/observable/of';
 
 
 describe('MenuService', () => {
-  // let menuService: MenuService;
 
   const mockedPizza1: Dish = {
     id: 1,
@@ -82,7 +77,6 @@ describe('MenuService', () => {
       providers: [MenuService],
       imports: [RouterTestingModule, HttpClientModule, HttpClientTestingModule]
     });
-    // menuService = TestBed.get(MenuService);
   });
 
   it('should be created', inject([MenuService], (service: MenuService) => {
@@ -101,25 +95,6 @@ describe('MenuService', () => {
 
     expect(getSpy).toHaveBeenCalled();
     expect(pizzas).toEqual(mockedPizzas);
-    // toEqual(mockedPizzas);
-    // const meal = <Meal>{};
-    //
-    // service.addItemToOrder(meal);
-    //
-    // expect(service.meals.length).toBe(1);
-    /*it('should test getAllOrders method', inject([OrderService], (service: OrderService) => {
-    //Given
-    const clientModule = TestBed.get(HttpClient);
-    const getSpy = spyOn(clientModule, 'get');
-
-    //When
-    service.getAllOrders();
-
-    //Then
-    expect(getSpy).toHaveBeenCalled();
-  }));
-*/
-
   }));
 
   it('should get Spagetti equals mockedSpagetti', inject([MenuService], (menuService: MenuService) => {

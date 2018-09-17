@@ -88,7 +88,7 @@ describe('OrderComponent', () => {
     expect(fixture.componentInstance.order.firstName).toBe('someName');
   }));
 
-  it('method valid should return true', () => {
+  it('method valid should return true, address over 4 signs', () => {
 
     // given
     component.order.firstName = 'fname';
@@ -99,7 +99,7 @@ describe('OrderComponent', () => {
     expect(component.valid()).toBe(true);
   });
 
-  it('method valid should return false', () => {
+  it('method valid should return false, address under 4 signs', () => {
 
     // given
     component.order.firstName = 'fname';

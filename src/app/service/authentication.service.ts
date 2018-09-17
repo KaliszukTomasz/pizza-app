@@ -18,10 +18,6 @@ export class AuthenticationService {
 
   }
 
-  getAccountFromDatabaseByLogin(login: string): Observable<Account> {
-    return this.httpClient.get<Account>(`http://localhost:3000/users`, {params: {login: login}});
-  }
-
   setAuthenticatedUser() {
     this.authenticated = true;
   }
