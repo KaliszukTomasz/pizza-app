@@ -1,10 +1,10 @@
 <div id="border">
   <table>
     <tr>
-      <td>Id</td>
-      <td>Adres</td>
-      <td>Status</td>
-      <td>Id dań</td>
+      <th>Id</th>
+      <th>Adres</th>
+      <th>Status</th>
+      <th>Id dań</th>
     </tr>
     <tr *ngFor="let order of orders">
       <td>{{order?.id}}</td>
@@ -13,7 +13,7 @@
       <td><span *ngFor="let item of order.dishes">{{item.id}}  </span></td>
 
       <button (click)="changeToDoneStatus(order)">zrobione</button>
-      <button [routerLink]="['/admin/orders', order.id]">details</button>
+      <button [routerLink]="['/admin/orders', order.id]">detale zamówienia</button>
       <button (click)="deleteOrder(order.id)">usuń</button>
     </tr>
   </table>

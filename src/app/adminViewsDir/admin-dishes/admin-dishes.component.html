@@ -2,10 +2,10 @@
 <h1> Pizzas: </h1>
 <table>
   <tr>
-    <td >Id</td>
-    <td >Name</td>
-    <td >Price</td>
-    <td >Availability</td>
+    <th >Id</th>
+    <th >Name</th>
+    <th >Price</th>
+    <th >Availability</th>
   </tr>
   <tr *ngFor="let pizza of pizzas">
     <td >{{pizza.id}}</td>
@@ -13,17 +13,17 @@
     <td >{{pizza.price}}</td>
     <td >{{pizza.isAvailable}}</td>
     <button (click)="changeAvailability(pizza)">Zmień dostępność</button>
-    <button [routerLink]="['/pizzas', pizza.id]">details</button>
+    <button [routerLink]="['/pizzas', pizza.id]">detale dania</button>
   </tr>
 </table>
 
 <h1> Spagetti: </h1>
 <table>
   <tr>
-    <td>Id</td>
-    <td>Name</td>
-    <td>Price</td>
-    <td >Availability</td>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th >Availability</th>
   </tr>
 
   <tr *ngFor="let spageti of spagetti">
@@ -32,17 +32,17 @@
     <td>{{spageti.price}}</td>
     <td >{{spageti.isAvailable}}</td>
     <button (click)="changeAvailability(spageti)">Zmień dostępność</button>
-    <button [routerLink]="['/spagetti', spageti.id]">details</button>
+    <button [routerLink]="['/spagetti', spageti.id]">detale dania</button>
   </tr>
 </table>
 
 <h1> Drinks: </h1>
   <table>
     <tr>
-      <td >Id</td>
-      <td >Name</td>
-      <td >Price</td>
-      <td >Availability</td>
+      <th >Id</th>
+      <th >Name</th>
+      <th >Price</th>
+      <th >Availability</th>
     </tr>
     <tr *ngFor="let drink of drinks">
       <td >{{drink.id}}</td>
@@ -50,7 +50,7 @@
       <td >{{drink.price}}</td>
       <td >{{drink.isAvailable}}</td>
       <button (click)="changeAvailability(drink)">Zmień dostępność</button>
-      <button [routerLink]="['/drinks', drink.id]">details</button>
+      <button [routerLink]="['/drinks', drink.id]">detale dania</button>
     </tr>
   </table>
 
